@@ -1,0 +1,49 @@
+
+.container-fluid > .row {
+    border-bottom: 3px #aaa solid;
+ }
+ 
+ .row {
+     padding: 5px;
+ }
+
+ .container-fluid > .row > div > .row:nth-child(even) > div {
+    background-color: #555;
+    border-radius: 6px;
+ }
+
+ body,
+ select.form-control option {
+     background: #333;
+     color: #eee;
+ }
+
+textarea.form-control,
+input[type=text].form-control,
+select.form-control {
+    background-color: transparent;
+    color: #eee;
+}
+
+.input-group-xs {
+    padding: 0;
+}
+
+button {
+    background-color: #444;
+}
+
+.error {
+    background-color: darkred;
+    position:fixed;
+    bottom:0;
+    z-index: 1000;
+}
+
+.input-group[class*=col-] {
+    float: left;
+}
+
+.indent-1 {
+    margin-left: 5%;
+}
