@@ -9,11 +9,12 @@ export interface IRule {
 export interface IAction {
     address: string;
     method: string;
-    body: IBody;
+    body: IBody[];
 }
 
 export interface IBody {
-    [key: string]: string;
+    key: string;
+    value: string;
 }
 
 export interface ICondition {
@@ -25,5 +26,12 @@ export interface ICondition {
 export interface IPayload {
     name: string;
     conditions: ICondition[];
-    actions: IAction[];
+    actions: IPayloadAction[];
+    status: string;
+}
+
+export interface IPayloadAction {
+    address: string;
+    method: string;
+    body: Object;
 }

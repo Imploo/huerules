@@ -1,10 +1,17 @@
-<div *ngIf='errorMessage' class='error'>
+<div *ngIf='errorMessage' class='error' (click)='errorMessage = ""'>
         {{errorMessage}}
 </div>
 <div class='container-fluid'>
     <div class='row' *ngFor='let rule of rules'>
         <div class='col-xs-1'>
-            <div class='row'>{{rule.id}}</div>
+            <div class='row'>
+                <div class='col'>{{rule.id}}</div>
+                <div class='col'>
+                    <label><input #status type="checkbox" 
+                        [checked]='rule.status == "enabled"' 
+                        (change)='rule.status = status.checked ? "enabled" : "disabled"'/>Active</label>
+                </div>
+            </div>
             <div class='row'>
                 <button (click)='save(rule)' type="button" class='btn btn-dark'>Save</button>
             </div>
@@ -27,7 +34,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class='row'>
+                    <div class='row' *ngIf='condition.operator != "dx"'>
                         <div class='col-xs-12 input-group-xs'>
                             <input type='text' [(ngModel)]='condition.value' class='form-control input-xs' />
                         </div>
@@ -53,7 +60,7 @@
                             <input type='text' [(ngModel)]='action.method' class='form-control input-xs' />
                         </div>
                     </div>
-                    <div class='row indent-1' *ngFor='let body of action.body | hashmap'>
+                    <div class='row indent-1' *ngFor='let body of action.body'>
                         <div class='col-xs-6 input-group'>
                             <input type='text' [(ngModel)]='body.key' class='form-control input-xs' />
                         </div>
@@ -74,5 +81,11 @@
                 </div>
             </div>
         </div>
+        <div class='col-xs-1'>
+            <button (click)='removeRule(rule)' type='button' class='btn btn-dark'>x</button>
+        </div>
+    </div>
+    <div class='row'>
+        <button (click)='newRule()' type='button' class='btn btn-dark'>Add new rule</button>        
     </div>
 </div>

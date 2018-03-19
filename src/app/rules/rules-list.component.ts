@@ -24,7 +24,10 @@ export class RulesListComponent implements OnInit {
     
     ngOnInit(): void {
         this.errorMessage = "";
+        this.initRules();
+    }
 
+    initRules(): void {
         this._rulesService.getRules()
          .subscribe(rules => {
              this.rules = rules;
@@ -40,10 +43,13 @@ export class RulesListComponent implements OnInit {
 
     save(rule: IRule): void {
         this._rulesService.save(rule)
-        .subscribe(this.parseMessage, this.parseMessage);
-
-        this._rulesService.returnResponse()
-        .subscribe(this.parseMessage, this.parseMessage)
+        .subscribe(
+            ok => 
+            {
+                this.parseMessage(ok);                
+                if (!this.errorMessage.includes("error"))
+                    this.initRules();
+            }, this.parseMessage);
     }
 
     private parseMessage = (error: Response | any): void => {
@@ -54,14 +60,24 @@ export class RulesListComponent implements OnInit {
     }
 
     newCondition(rule: IRule): void {
+        if (!rule.conditions)
+            rule.conditions = [];
         rule.conditions.push(<ICondition>{});
     }
 
     newAction(rule: IRule): void {
+        if (!rule.actions)
+            rule.actions = [];
         rule.actions.push(<IAction>{});
     }
 
     newBodyEntry(action: IAction): void {
-        action.body["key"] = "val";
+        if (!action.body)
+            action.body = [];
+        action.body.push(<IBody>{});
+    }
+
+    newRule(): void {
+        this.rules.push(<IRule>{});
     }
 }

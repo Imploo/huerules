@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/timeout';
 
-import { IRule } from './rule'
+import { IRule, IBody, IAction, IPayload, IPayloadAction } from './rule'
 
 @Injectable()
 export class RulesService {
@@ -33,31 +33,66 @@ export class RulesService {
             .map(this.mapData);
     }
 
-    returnResponse(): Observable<Response> {
-        return this._http.get(this._responseUrl);
-    }
-
-    mapData(response: Response): IRule[] {
+    mapData = (response: Response): IRule[] => {
         let json = response.json();
         let result = <IRule[]>Object.keys(json).map(key => {
             let value = <IRule>json[key];
             value.id = +key;
+            for (let action of value.actions)
+                action.body = this.convertToBodyArray(action.body);
             return value;
         });
         return result;
     }
 
     save(rule: IRule): Observable<Response> {
+        if (rule.id)
+            return this.putRule(rule);
+        return this.postRule(rule);
+    }
+
+    private postRule(rule: IRule): Observable<Response> {
+        return this._http.post(this._bridgeUrl, this.mapToPayload(rule))
+            .timeout(2000);
+    }
+
+    private putRule(rule: IRule): Observable<Response> {
         let postUrl = this._bridgeUrl + '/' + rule.id;
         return this._http.put(postUrl, this.mapToPayload(rule))
             .timeout(2000);
     }
 
-    private mapToPayload(rule: IRule): IRule {
-        var data = <IRule>{};
+    private mapToPayload(rule: IRule): IPayload {
+        var data = <IPayload>{};
         data.name = rule.name;
-        data.actions = rule.actions;
+        data.actions = this.convertToPayloadAction(rule.actions);
         data.conditions = rule.conditions;
+        data.status = rule.status;
+        console.log(JSON.stringify(data));
         return data;
+    }
+
+    convertToPayloadAction(data: IAction[]): IPayloadAction[]
+    {
+        let payloadActions = [];
+        for (let action of data)
+        {
+            let payload = <IPayloadAction>{};
+            payload.address = action.address;
+            payload.method = action.method;
+            payload.body = {};
+            for (let body of action.body)
+                payload.body[body.key] = body.value;
+            payloadActions.push(payload);
+        }
+        return payloadActions;
+    }
+
+    convertToBodyArray(data: Object): IBody[] {
+        let bodyEntries = [];
+        for (let key in data) {
+            bodyEntries.push({key: key, value: data[key]});
+        }
+        return bodyEntries;
     }
 }
