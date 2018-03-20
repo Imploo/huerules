@@ -80,4 +80,10 @@ export class RulesListComponent implements OnInit {
     newRule(): void {
         this.rules.push(<IRule>{});
     }
+
+    removeBody(action: IAction, body: IBody): void {
+        let index: number = action.body.findIndex(x => x.key == body.key);
+        if (index > -1)
+            action.body.splice(index, 1);
+    }
 }

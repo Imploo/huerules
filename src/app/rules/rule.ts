@@ -14,7 +14,7 @@ export interface IAction {
 
 export interface IBody {
     key: string;
-    value: string;
+    value: string|number|boolean;
 }
 
 export interface ICondition {

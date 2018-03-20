@@ -23,8 +23,11 @@
             <div class='row' *ngFor='let condition of rule.conditions'>
                 <div class='col-xs-12'>
                     <div class='row'>
-                        <div class='col-xs-12 input-group-xs'>
+                        <div class='col-xs-11 input-group-xs'>
                             <input type='text' [(ngModel)]='condition.address' class='form-control input-xs' />
+                        </div>
+                        <div class='col-xs-1 input-group-xs'>
+                            <button (click)='removeCondition(rule, condition)' type='button' class='btn btn-dark btn-block'>x</button>
                         </div>
                     </div>
                     <div class='row'>
@@ -51,8 +54,11 @@
             <div class='row' *ngFor='let action of rule.actions'>
                 <div class='col-xs-12'>
                     <div class='row'>
-                        <div class='col-xs-12 input-group'>
+                        <div class='col-xs-11 input-group'>
                             <input type='text' [(ngModel)]='action.address' class='form-control input-xs' />
+                        </div>
+                        <div class='col-xs-1 input-group-xs'>
+                            <button (click)='removeAction(rule, action)' type='button' class='btn btn-dark btn-block'>x</button>
                         </div>
                     </div>
                     <div class='row'>
@@ -61,11 +67,14 @@
                         </div>
                     </div>
                     <div class='row indent-1' *ngFor='let body of action.body'>
-                        <div class='col-xs-6 input-group'>
+                        <div class='col-xs-5 input-group'>
                             <input type='text' [(ngModel)]='body.key' class='form-control input-xs' />
                         </div>
-                        <div class='col-xs-6 input-group'>
+                        <div class='col-xs-5 input-group'>
                             <input type='text' [(ngModel)]='body.value' class='form-control input-xs' />
+                        </div>
+                        <div class='col-xs-1 input-group-xs'>
+                            <button (click)='removeBody(action, body)' type='button' class='btn btn-dark btn-block'>x</button>
                         </div>
                     </div>
                     <div class='row indent-1'>

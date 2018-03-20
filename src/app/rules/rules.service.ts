@@ -82,7 +82,7 @@ export class RulesService {
             payload.method = action.method;
             payload.body = {};
             for (let body of action.body)
-                payload.body[body.key] = body.value;
+                payload.body[body.key] = this.convertToCorrectType(body.value);
             payloadActions.push(payload);
         }
         return payloadActions;
@@ -91,8 +91,21 @@ export class RulesService {
     convertToBodyArray(data: Object): IBody[] {
         let bodyEntries = [];
         for (let key in data) {
-            bodyEntries.push({key: key, value: data[key]});
+            bodyEntries.push({key: key, value: this.convertToCorrectType(data[key])});
         }
         return bodyEntries;
+    }
+
+    private convertToCorrectType = (val: string|number|boolean): string|number|boolean => {
+        if (typeof(val) === typeof(true))
+            return val;
+        if (val == "true")
+            return true;
+        if (val == "false")
+            return false;
+        let num = +val;
+        if (!isNaN(num))
+            return num;
+        return val;
     }
 }
