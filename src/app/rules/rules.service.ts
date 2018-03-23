@@ -91,7 +91,7 @@ export class RulesService {
     convertToBodyArray(data: Object): IBody[] {
         let bodyEntries = [];
         for (let key in data) {
-            bodyEntries.push({key: key, value: this.convertToCorrectType(data[key])});
+            bodyEntries.push({key: key, value: data[key]});
         }
         return bodyEntries;
     }
@@ -107,5 +107,10 @@ export class RulesService {
         if (!isNaN(num))
             return num;
         return val;
+    }
+
+    delete(id: number): Observable<Response> {
+        return this._http.delete(this._bridgeUrl + '/' + id)
+            .timeout(2000);
     }
 }

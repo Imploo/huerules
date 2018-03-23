@@ -86,4 +86,36 @@ export class RulesListComponent implements OnInit {
         if (index > -1)
             action.body.splice(index, 1);
     }
+
+    removeRule(rule: IRule): void {
+        if (rule.id) {
+            this._rulesService.delete(rule.id)
+            .subscribe(
+                ok => 
+                {
+                    this.parseMessage(ok);                
+                    if (!this.errorMessage.includes("error"))
+                        this.initRules();
+                }, this.parseMessage);
+        }
+        else {
+            let index = this.rules.findIndex(x => x.name == rule.name);
+            if (index > -1) {
+                this.rules.splice(index, 1);
+            }
+        }
+    }
+
+    removeAction(rule: IRule, action: IAction): void {
+        let index: number = rule.actions.findIndex(x => x.address == action.address);
+        if (index > -1)
+            rule.actions.splice(index, 1);
+    }
+
+    removeCondition(rule: IRule, condition: ICondition): void {
+        let index: number = rule.conditions.findIndex(x => x.address == condition.address && x.operator == condition.operator);
+        if (index > -1) {
+            rule.conditions.splice(index, 1);
+        }
+    }
 }
