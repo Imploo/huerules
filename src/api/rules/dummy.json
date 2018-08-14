@@ -1,597 +1,501 @@
 {
-    "1": {
-        "name": "MotionSensor 7.day-on",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:50",
-        "lasttriggered": "2018-03-11T17:54:31",
-        "timestriggered": 201,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/15/state/status",
-                "operator": "lt",
-                "value": "1"
-            },
-            {
-                "address": "/config/localtime",
-                "operator": "in",
-                "value": "T07:30:00/T22:30:00"
-            },
-            {
-                "address": "/sensors/8/state/dark",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/0/action",
-                "method": "PUT",
-                "body": {
-                    "scene": "tGjrzJKDVp8ykkn"
-                }
-            },
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 1
-                }
-            }
-        ]
-    },
-    "2": {
-        "name": "MotionSensor 7.day-dark-on",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:50",
-        "lasttriggered": "none",
-        "timestriggered": 0,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/15/state/status",
-                "operator": "lt",
-                "value": "1"
-            },
-            {
-                "address": "/config/localtime",
-                "operator": "in",
-                "value": "T07:30:00/T22:30:00"
-            },
-            {
-                "address": "/sensors/8/state/dark",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/8/state/dark",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/0/action",
-                "method": "PUT",
-                "body": {
-                    "scene": "tGjrzJKDVp8ykkn"
-                }
-            },
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 1
-                }
-            }
-        ]
-    },
-    "3": {
-        "name": "Living.OnAtDay",
-        "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
-        "created": "2018-01-13T14:04:27",
-        "lasttriggered": "none",
-        "timestriggered": 0,
-        "status": "disabled",
-        "recycle": false,
-        "conditions": [
-            {
-                "address": "/sensors/14/state/status",
-                "operator": "eq",
-                "value": "1"
-            },
-            {
-                "address": "/sensors/1/state/daylight",
-                "operator": "eq",
-                "value": "true"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/1/action",
-                "method": "PUT",
-                "body": {
-                    "scene": "4y9LKzGKTBWrhre"
-                }
-            }
-        ]
-    },
-    "4": {
-        "name": "MotionSensor 7.night-on",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:50",
-        "lasttriggered": "2018-03-11T06:19:12",
-        "timestriggered": 56,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/15/state/status",
-                "operator": "lt",
-                "value": "1"
-            },
-            {
-                "address": "/config/localtime",
-                "operator": "in",
-                "value": "T22:30:00/T07:30:00"
-            },
-            {
-                "address": "/sensors/8/state/dark",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 1
-                }
-            }
-        ]
-    },
-    "5": {
-        "name": "MotionSensor 7.night-dark-on",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:51",
-        "lasttriggered": "none",
-        "timestriggered": 0,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/15/state/status",
-                "operator": "lt",
-                "value": "1"
-            },
-            {
-                "address": "/config/localtime",
-                "operator": "in",
-                "value": "T22:30:00/T07:30:00"
-            },
-            {
-                "address": "/sensors/8/state/dark",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/8/state/dark",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 1
-                }
-            }
-        ]
-    },
-    "6": {
-        "name": "MotionKitchen.OnAtDay",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-09T20:41:51",
-        "lasttriggered": "none",
-        "timestriggered": 0,
-        "status": "disabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/14/state/status",
-                "operator": "eq",
-                "value": "1"
-            },
-            {
-                "address": "/sensors/14/state/lastupdated",
-                "operator": "dx"
-            },
-            {
-                "address": "/config/localtime",
-                "operator": "in",
-                "value": "T07:00:00/T17:00:00"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/0",
-                "method": "PUT",
-                "body": {}
-            }
-        ]
-    },
-    "7": {
-        "name": "MotionKitchen.OnAtEvening",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-09T20:41:51",
-        "lasttriggered": "none",
-        "timestriggered": 0,
-        "status": "disabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/14/state/status",
-                "operator": "eq",
-                "value": "1"
-            },
-            {
-                "address": "/sensors/14/state/lastupdated",
-                "operator": "dx"
-            },
-            {
-                "address": "/config/localtime",
-                "operator": "in",
-                "value": "T17:00:00/T00:00:00"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/0",
-                "method": "PUT",
-                "body": {}
-            }
-        ]
-    },
-    "8": {
-        "name": "MotionKitchen.OnAtNight",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-09T20:41:51",
-        "lasttriggered": "none",
-        "timestriggered": 0,
-        "status": "disabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/14/state/status",
-                "operator": "eq",
-                "value": "1"
-            },
-            {
-                "address": "/sensors/14/state/lastupdated",
-                "operator": "dx"
-            },
-            {
-                "address": "/config/localtime",
-                "operator": "in",
-                "value": "T00:00:00/T07:00:00"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/0",
-                "method": "PUT",
-                "body": {}
-            }
-        ]
-    },
-    "9": {
-        "name": "MotionSensor 7.dim",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:51",
-        "lasttriggered": "2018-03-11T17:52:22",
-        "timestriggered": 204,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "false"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "ddx",
-                "value": "PT00:19:15"
-            },
-            {
-                "address": "/groups/0/state/any_on",
-                "operator": "eq",
-                "value": "true"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/scenes/Nfh13hOLtZvSo58",
-                "method": "PUT",
-                "body": {
-                    "storelightstate": true
-                }
-            },
-            {
-                "address": "/groups/0/action",
-                "method": "PUT",
-                "body": {
-                    "bri_inc": -128
-                }
-            },
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 2
-                }
-            }
-        ]
-    },
-    "10": {
-        "name": "Living.OnAtNight",
-        "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
-        "created": "2018-01-10T19:56:56",
-        "lasttriggered": "none",
-        "timestriggered": 0,
-        "status": "disabled",
-        "recycle": false,
-        "conditions": [
-            {
-                "address": "/sensors/14/state/status",
-                "operator": "eq",
-                "value": "1"
-            },
-            {
-                "address": "/sensors/1/state/daylight",
-                "operator": "eq",
-                "value": "false"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/1/action",
-                "method": "PUT",
-                "body": {
-                    "scene": "jwBqZNgy2BmDISI"
-                }
-            }
-        ]
-    },
-    "11": {
-        "name": "MotionSensor 7.recover",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:51",
-        "lasttriggered": "2018-03-10T15:20:43",
-        "timestriggered": 31,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/15/state/status",
-                "operator": "gt",
-                "value": "1"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/0/action",
-                "method": "PUT",
-                "body": {
-                    "scene": "Nfh13hOLtZvSo58"
-                }
-            },
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 1
-                }
-            }
-        ]
-    },
-    "12": {
-        "name": "MotionSensor 7.off",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:51",
-        "lasttriggered": "2018-03-11T17:52:52",
-        "timestriggered": 173,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "false"
-            },
-            {
-                "address": "/sensors/15/state/status",
-                "operator": "gt",
-                "value": "1"
-            },
-            {
-                "address": "/sensors/15/state/status",
-                "operator": "ddx",
-                "value": "PT00:00:30"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/0/action",
-                "method": "PUT",
-                "body": {
-                    "on": false
-                }
-            },
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 0
-                }
-            }
-        ]
-    },
-    "13": {
-        "name": "MotionSensor 7.arm",
-        "owner": "Nqd9BjkJu-5cb2GgLGrwq5RibwpB7Q0G0V8iXRvI",
-        "created": "2018-01-30T16:18:51",
-        "lasttriggered": "2018-03-11T17:52:52",
-        "timestriggered": 300,
-        "status": "enabled",
-        "recycle": true,
-        "conditions": [
-            {
-                "address": "/groups/0/state/any_on",
-                "operator": "eq",
-                "value": "false"
-            },
-            {
-                "address": "/sensors/7/state/presence",
-                "operator": "eq",
-                "value": "false"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 0
-                }
-            }
-        ]
-    },
-    "14": {
-        "name": "MotionSensor 7.manualOff",
-        "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
-        "created": "2018-03-07T20:38:16",
-        "lasttriggered": "2018-03-11T17:52:52",
-        "timestriggered": 40,
-        "status": "enabled",
-        "recycle": false,
-        "conditions": [
-            {
-                "address": "/groups/0/state/any_on",
-                "operator": "eq",
-                "value": "false"
-            },
-            {
-                "address": "/groups/0/state/any_on",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/sensors/15/state",
-                "method": "PUT",
-                "body": {
-                    "status": 0
-                }
-            }
-        ]
-    },
-    "15": {
-        "name": "LivingWhites.AutoOff",
-        "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
-        "created": "2018-03-07T20:55:04",
-        "lasttriggered": "2018-03-11T17:52:52",
-        "timestriggered": 35,
-        "status": "enabled",
-        "recycle": false,
-        "conditions": [
-            {
-                "address": "/groups/1/state/all_on",
-                "operator": "eq",
-                "value": "false"
-            },
-            {
-                "address": "/groups/1/state/all_on",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/groups/2/action",
-                "method": "PUT",
-                "body": {
-                    "on": false
-                }
-            }
-        ]
-    },
-    "16": {
-        "name": "HipsterLight.AlwaysDim",
-        "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
-        "created": "2018-03-07T21:03:35",
-        "lasttriggered": "2018-03-11T17:54:31",
-        "timestriggered": 31,
-        "status": "enabled",
-        "recycle": false,
-        "conditions": [
-            {
-                "address": "/lights/7/state/on",
-                "operator": "eq",
-                "value": "true"
-            },
-            {
-                "address": "/lights/7/state/on",
-                "operator": "dx"
-            }
-        ],
-        "actions": [
-            {
-                "address": "/lights/7/state",
-                "method": "PUT",
-                "body": {
-                    "bri": 1
-                }
-            }
-        ]
-    }
+  "1": {
+    "name": "MotionSensor 7.day-on",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-11T20:57:38",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": true,
+    "conditions": [
+      {
+        "address": "/config/localtime",
+        "operator": "in",
+        "value": "T07:30:00/T23:15:00"
+      },
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "eq",
+        "value": "true"
+      },
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "dx"
+      },
+      {
+        "address": "/sensors/1/state/daylight",
+        "operator": "eq",
+        "value": "true"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/sensors/15/state",
+        "method": "PUT",
+        "body": {
+          "status": 1
+        }
+      }
+    ]
+  },
+  "2": {
+    "name": "MotionSensor 7.evening-on",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:07:04",
+    "lasttriggered": "2018-08-14T20:46:41",
+    "timestriggered": 4,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/config/localtime",
+        "operator": "in",
+        "value": "T07:30:00/T23:15:00"
+      },
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "eq",
+        "value": "true"
+      },
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "dx"
+      },
+      {
+        "address": "/sensors/1/state/daylight",
+        "operator": "eq",
+        "value": "false"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/sensors/15/state",
+        "method": "PUT",
+        "body": {
+          "status": 2
+        }
+      }
+    ]
+  },
+  "3": {
+    "name": "MotionSensor 7.night-on",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-11T20:57:38",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": true,
+    "conditions": [
+      {
+        "address": "/config/localtime",
+        "operator": "in",
+        "value": "T23:15:00/T07:30:00"
+      },
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "eq",
+        "value": "true"
+      },
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/sensors/15/state",
+        "method": "PUT",
+        "body": {
+          "status": 3
+        }
+      }
+    ]
+  },
+  "4": {
+    "name": "Home.Evening-starts",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:11:19",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/sensors/1/state/daylight",
+        "operator": "eq",
+        "value": "false"
+      },
+      {
+        "address": "/sensors/1/state/daylight",
+        "operator": "dx"
+      },
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "eq",
+        "value": "1"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/sensors/15/state",
+        "method": "PUT",
+        "body": {
+          "status": 2
+        }
+      }
+    ]
+  },
+  "5": {
+    "name": "MotionSensor 7.off-timer",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-11T20:57:38",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": true,
+    "conditions": [
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "eq",
+        "value": "false"
+      },
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "ddx",
+        "value": "PT00:30:00"
+      },
+      {
+        "address": "/sensors/16/state/presence",
+        "operator": "eq",
+        "value": "false"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/sensors/15/state",
+        "method": "PUT",
+        "body": {
+          "status": 0
+        }
+      }
+    ]
+  },
+  "6": {
+    "name": "MotionSensor 7.off-gps",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-11T20:57:38",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": true,
+    "conditions": [
+      {
+        "address": "/sensors/7/state/presence",
+        "operator": "eq",
+        "value": "false"
+      },
+      {
+        "address": "/sensors/16/state/presence",
+        "operator": "eq",
+        "value": "false"
+      },
+      {
+        "address": "/sensors/16/state/presence",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/sensors/15/state",
+        "method": "PUT",
+        "body": {
+          "status": 0
+        }
+      }
+    ]
+  },
+  "7": {
+    "name": "Hallway.Night",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:27:10",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "eq",
+        "value": "3"
+      },
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/groups/4/state",
+        "method": "PUT",
+        "body": {
+          "on": true,
+          "bri": 1,
+          "ct": 454
+        }
+      }
+    ]
+  },
+  "8": {
+    "name": "Home.Day-on",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:29:51",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "eq",
+        "value": "1"
+      },
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/groups/0/action",
+        "method": "PUT",
+        "body": {
+          "on": true,
+          "bri": 255,
+          "ct": 345
+        }
+      }
+    ]
+  },
+  "9": {
+    "name": "Home.AutoOff",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:34:45",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "eq",
+        "value": "0"
+      },
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/groups/0/action",
+        "method": "PUT",
+        "body": {
+          "on": false
+        }
+      }
+    ]
+  },
+  "10": {
+    "name": "Home.Evening-on",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:35:03",
+    "lasttriggered": "2018-08-14T20:44:38",
+    "timestriggered": 1,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "eq",
+        "value": "2"
+      },
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/groups/0/action",
+        "method": "PUT",
+        "body": {
+          "on": true,
+          "bri": 255,
+          "ct": 454
+        }
+      }
+    ]
+  },
+  "11": {
+    "name": "Toilet.AutoDim",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:41:12",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "eq",
+        "value": "3"
+      },
+      {
+        "address": "/groups/6/state/any_on",
+        "operator": "eq",
+        "value": "true"
+      },
+      {
+        "address": "/groups/6/state/any_on",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/groups/6/action",
+        "method": "PUT",
+        "body": {
+          "bri": 1
+        }
+      }
+    ]
+  },
+  "12": {
+    "name": "Toilet.AutoBri",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-08-14T20:42:01",
+    "lasttriggered": "none",
+    "timestriggered": 0,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/sensors/15/state/status",
+        "operator": "lt",
+        "value": "3"
+      },
+      {
+        "address": "/groups/6/state/any_on",
+        "operator": "eq",
+        "value": "true"
+      },
+      {
+        "address": "/groups/6/state/any_on",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/groups/6/action",
+        "method": "PUT",
+        "body": {
+          "bri": 150
+        }
+      }
+    ]
+  },
+  "14": {
+    "name": "MotionSensor 7.manualOff",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-03-07T20:38:16",
+    "lasttriggered": "2018-08-14T18:03:56",
+    "timestriggered": 62,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/groups/0/state/any_on",
+        "operator": "eq",
+        "value": "false"
+      },
+      {
+        "address": "/groups/0/state/any_on",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/sensors/15/state",
+        "method": "PUT",
+        "body": {
+          "status": 0
+        }
+      }
+    ]
+  },
+  "15": {
+    "name": "LivingWhites.AutoOff",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-03-07T20:55:04",
+    "lasttriggered": "2018-08-14T19:24:58",
+    "timestriggered": 42,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/groups/1/state/all_on",
+        "operator": "eq",
+        "value": "false"
+      },
+      {
+        "address": "/groups/1/state/all_on",
+        "operator": "dx"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/groups/2/action",
+        "method": "PUT",
+        "body": {
+          "on": false
+        }
+      },
+      {
+        "address": "/groups/3/action",
+        "method": "PUT",
+        "body": {
+          "on": false
+        }
+      }
+    ]
+  },
+  "16": {
+    "name": "HipsterLight.AlwaysDim",
+    "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+    "created": "2018-03-07T21:03:35",
+    "lasttriggered": "2018-08-14T19:25:16",
+    "timestriggered": 43,
+    "status": "enabled",
+    "recycle": false,
+    "conditions": [
+      {
+        "address": "/lights/7/state/on",
+        "operator": "dx"
+      },
+      {
+        "address": "/lights/7/state/on",
+        "operator": "eq",
+        "value": "true"
+      }
+    ],
+    "actions": [
+      {
+        "address": "/lights/7/state",
+        "method": "PUT",
+        "body": {
+          "bri": 1
+        }
+      }
+    ]
+  }
 }
