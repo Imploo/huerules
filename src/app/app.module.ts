@@ -1,13 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-
-
 import { AppComponent } from './app.component';
 import { RulesListComponent } from './rules/rules-list.component';
 import { HashmapPipe } from './pipes/hashmap.pipe';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,8 +14,8 @@ import { HashmapPipe } from './pipes/hashmap.pipe';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

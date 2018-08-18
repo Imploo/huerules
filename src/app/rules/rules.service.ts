@@ -1,10 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
-import {HttpHeaders} from '@angular/common/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/timeout';
+import {Observable} from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {IRule, IBody, IAction, IPayload, IPayloadAction} from './rule';
 
 @Injectable()
@@ -13,37 +9,26 @@ export class RulesService {
   private _dummyUrl = 'api/rules/dummy.json';
   private _responseUrl = 'api/rules/response.json';
 
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
-
-  constructor(private _http: Http) {
+  constructor(private _http: HttpClient) {
   }
 
   getRules(): Observable<IRule[]> {
-    return this._http.get(this._bridgeUrl)
-      .map(this.mapData)
-      .timeout(1000);
+    return this._http.get<IRule[]>(this._bridgeUrl);
   }
 
   returnDummy(): Observable<IRule[]> {
-    return this._http.get(this._dummyUrl)
-      .map(this.mapData);
+    return this._http.get<IRule[]>(this._dummyUrl);
   }
 
-  mapData = (response: Response): IRule[] => {
-    const json = response.json();
-    const result = <IRule[]>Object.keys(json).map(key => {
-      const value = <IRule>json[key];
-      value.id = +key;
-      for (const action of value.actions) {
+  public parseRules(rules: IRule[]): IRule[] {
+    return Object.keys(rules).map(i => {
+      const rule = rules[i];
+      rule.id = +i;
+      for (const action of rule.actions) {
         action.body = this.convertToBodyArray(action.body);
       }
-      return value;
+      return rule;
     });
-    return result;
   }
 
   save(rule: IRule): Observable<Response> {
@@ -53,15 +38,13 @@ export class RulesService {
     return this.postRule(rule);
   }
 
-  private postRule(rule: IRule): Observable<Response> {
-    return this._http.post(this._bridgeUrl, this.mapToPayload(rule))
-      .timeout(2000);
+  private postRule(rule: IRule): Observable<any> {
+    return this._http.post(this._bridgeUrl, this.mapToPayload(rule));
   }
 
-  private putRule(rule: IRule): Observable<Response> {
+  private putRule(rule: IRule): Observable<any> {
     const postUrl = this._bridgeUrl + '/' + rule.id;
-    return this._http.put(postUrl, this.mapToPayload(rule))
-      .timeout(2000);
+    return this._http.put(postUrl, this.mapToPayload(rule));
   }
 
   private mapToPayload(rule: IRule): IPayload {
@@ -114,10 +97,9 @@ export class RulesService {
       return num;
     }
     return val;
-  };
+  }
 
-  delete(id: number): Observable<Response> {
-    return this._http.delete(this._bridgeUrl + '/' + id)
-      .timeout(2000);
+  delete(id: number): Observable<any> {
+    return this._http.delete(this._bridgeUrl + '/' + id);
   }
 }

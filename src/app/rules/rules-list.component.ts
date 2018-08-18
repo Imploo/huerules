@@ -16,8 +16,6 @@ export class RulesListComponent implements OnInit {
     errorMessage: string;
     operators: string[] = ['eq', 'lt', 'gt', 'dx', 'ddx', 'in'];
 
-    getObjectKeys = Object.keys;
-
     constructor(private _rulesService: RulesService) {
     }
 
@@ -29,13 +27,13 @@ export class RulesListComponent implements OnInit {
     initRules(): void {
         this._rulesService.getRules()
          .subscribe(rules => {
-             this.rules = rules;
+             this.rules = this._rulesService.parseRules(rules);
             },
             error => {
                 this.parseMessage(error);
                 this._rulesService.returnDummy()
                     .subscribe(rules => {
-                        this.rules = rules;
+                        this.rules = this._rulesService.parseRules(rules);
                     });
             });
     }
@@ -84,7 +82,7 @@ export class RulesListComponent implements OnInit {
     }
 
     removeBody(action: IAction, body: IBody): void {
-        const index: number = action.body.findIndex(x => x.key == body.key);
+        const index: number = action.body.findIndex(x => x.key === body.key);
         if (index > -1) {
             action.body.splice(index, 1);
         }
@@ -101,7 +99,7 @@ export class RulesListComponent implements OnInit {
                     }
                 }, this.parseMessage);
         } else {
-            const index = this.rules.findIndex(x => x.name == rule.name);
+            const index = this.rules.findIndex(x => x.name === rule.name);
             if (index > -1) {
                 this.rules.splice(index, 1);
             }
@@ -109,14 +107,14 @@ export class RulesListComponent implements OnInit {
     }
 
     removeAction(rule: IRule, action: IAction): void {
-        const index: number = rule.actions.findIndex(x => x.address == action.address);
+        const index: number = rule.actions.findIndex(x => x.address === action.address);
         if (index > -1) {
             rule.actions.splice(index, 1);
         }
     }
 
     removeCondition(rule: IRule, condition: ICondition): void {
-        const index: number = rule.conditions.findIndex(x => x.address == condition.address && x.operator == condition.operator);
+        const index: number = rule.conditions.findIndex(x => x.address === condition.address && x.operator === condition.operator);
         if (index > -1) {
             rule.conditions.splice(index, 1);
         }
