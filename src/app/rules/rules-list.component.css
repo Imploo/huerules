@@ -13,14 +13,18 @@
  }
 
  body,
- select.form-control option {
+ select.form-control option,
+ .ng-dropdown-panel.dark .ng-option,
+ .ng-dropdown-panel.dark .ng-optgroup{
      background: #333;
      color: #eee;
  }
 
+
 textarea.form-control,
 input[type=text].form-control,
-select.form-control {
+select.form-control,
+.ng-select.dark .ng-select-container {
     background-color: transparent;
     color: #eee;
 }

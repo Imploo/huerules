@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {RulesService} from './rules.service';
-import {IAction, IBody, ICondition, IRule} from './rule';
-import {Response} from '@angular/http';
+import {IAction, ICondition, IRule} from './rule';
 
 @Component({
     moduleId: module.id,
@@ -25,7 +24,8 @@ export class RulesListComponent implements OnInit {
     }
 
     initRules(): void {
-        this._rulesService.getRules()
+        // this._rulesService.getRules()
+        this._rulesService.returnDummy()
          .subscribe(rules => {
              this.rules = this._rulesService.parseRules(rules);
             },
@@ -67,25 +67,12 @@ export class RulesListComponent implements OnInit {
         if (!rule.actions) {
             rule.actions = [];
         }
-        rule.actions.push(<IAction>{});
-    }
 
-    newBodyEntry(action: IAction): void {
-        if (!action.body) {
-            action.body = [];
-        }
-        action.body.push(<IBody>{});
+        rule.actions.push(<IAction>{method: 'PUT'});
     }
 
     newRule(): void {
         this.rules.push(<IRule>{});
-    }
-
-    removeBody(action: IAction, body: IBody): void {
-        const index: number = action.body.findIndex(x => x.key === body.key);
-        if (index > -1) {
-            action.body.splice(index, 1);
-        }
     }
 
     removeRule(rule: IRule): void {
@@ -103,13 +90,6 @@ export class RulesListComponent implements OnInit {
             if (index > -1) {
                 this.rules.splice(index, 1);
             }
-        }
-    }
-
-    removeAction(rule: IRule, action: IAction): void {
-        const index: number = rule.actions.findIndex(x => x.address === action.address);
-        if (index > -1) {
-            rule.actions.splice(index, 1);
         }
     }
 

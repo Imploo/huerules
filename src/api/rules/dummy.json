@@ -502,11 +502,11 @@
     "recycle": false,
     "conditions": [
       {
-        "address": "/lights/7/state/on",
+        "address": "/lights/1/state/on",
         "operator": "dx"
       },
       {
-        "address": "/lights/7/state/on",
+        "address": "/lights/2/state/on",
         "operator": "eq",
         "value": "true"
       }

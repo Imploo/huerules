@@ -3,19 +3,23 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RulesListComponent } from './rules/rules-list.component';
-import { HashmapPipe } from './pipes/hashmap.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { StateComponent } from './rules/state/state.component';
+import {NgSelectModule} from '@ng-select/ng-select';
+import { ActionComponent } from './rules/action/action.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RulesListComponent,
-    HashmapPipe
+    StateComponent,
+    ActionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

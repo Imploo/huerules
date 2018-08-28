@@ -1,0 +1,21 @@
+<div class='col-xs-6 input-group-xs'>
+  <ng-select class="col dark"
+             [items]="entities"
+             bindLabel="name"
+             [(ngModel)]="selectedEntity"
+             groupBy="type"
+             placeholder="Select an entity"
+             (change)="handleChange()"
+             [clearable]="false">
+  </ng-select>
+</div>
+<div class='col-xs-5 input-group-xs'>
+  <ng-select class="col dark"
+             *ngIf="selectedEntity"
+             [items]="selectedEntity.properties"
+             [(ngModel)]="selectedEntity.selectedProperty"
+             (change)="handleChange()"
+             placeholder="Select a state property"
+             [clearable]="false">
+  </ng-select>
+</div>

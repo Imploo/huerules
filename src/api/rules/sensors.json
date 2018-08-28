@@ -1,0 +1,197 @@
+{
+  "1": {
+    "state": {
+      "daylight": false,
+      "lastupdated": "2018-08-15T18:32:00"
+    },
+    "config": {
+      "on": true,
+      "configured": true,
+      "sunriseoffset": 30,
+      "sunsetoffset": -30
+    },
+    "name": "Daylight",
+    "type": "Daylight",
+    "modelid": "PHDL00",
+    "manufacturername": "Philips",
+    "swversion": "1.0"
+  },
+  "3": {
+    "state": {
+      "presence": true,
+      "lastupdated": "2018-08-15T19:35:00"
+    },
+    "config": {
+      "on": true,
+      "reachable": true
+    },
+    "name": "HomeAway",
+    "type": "CLIPPresence",
+    "modelid": "HOMEAWAY",
+    "manufacturername": "7651c2cd61cacf262aef66d04a337f5",
+    "swversion": "A_1",
+    "uniqueid": "L_01_XiqOP",
+    "recycle": false
+  },
+  "5": {
+    "state": {
+      "status": 0,
+      "lastupdated": "none"
+    },
+    "config": {
+      "on": true,
+      "reachable": true
+    },
+    "name": "Light status",
+    "type": "CLIPGenericStatus",
+    "modelid": "Model 2015",
+    "manufacturername": "all 4 hue",
+    "swversion": "1.0",
+    "uniqueid": "PFHS-LIGHT-STATE",
+    "recycle": false
+  },
+  "6": {
+    "state": {
+      "temperature": 2393,
+      "lastupdated": "2018-08-15T20:09:03"
+    },
+    "swupdate": {
+      "state": "noupdates",
+      "lastinstall": null
+    },
+    "config": {
+      "on": true,
+      "battery": 100,
+      "reachable": true,
+      "alert": "none",
+      "ledindication": false,
+      "usertest": false,
+      "pending": []
+    },
+    "name": "Hue temperature sensor 1",
+    "type": "ZLLTemperature",
+    "modelid": "SML001",
+    "manufacturername": "Philips",
+    "productname": "Hue temperature sensor",
+    "swversion": "6.1.0.18912",
+    "uniqueid": "00:17:88:01:02:13:92:7a-02-0402",
+    "capabilities": {
+      "certified": true
+    }
+  },
+  "7": {
+    "state": {
+      "presence": false,
+      "lastupdated": "2018-08-15T19:57:08"
+    },
+    "swupdate": {
+      "state": "noupdates",
+      "lastinstall": null
+    },
+    "config": {
+      "on": true,
+      "battery": 100,
+      "reachable": true,
+      "alert": "none",
+      "ledindication": false,
+      "usertest": false,
+      "sensitivity": 2,
+      "sensitivitymax": 2,
+      "pending": []
+    },
+    "name": "Living sensor",
+    "type": "ZLLPresence",
+    "modelid": "SML001",
+    "manufacturername": "Philips",
+    "productname": "Hue motion sensor",
+    "swversion": "6.1.0.18912",
+    "uniqueid": "00:17:88:01:02:13:92:7a-02-0406",
+    "capabilities": {
+      "certified": true
+    }
+  },
+  "8": {
+    "state": {
+      "lightlevel": 0,
+      "dark": true,
+      "daylight": false,
+      "lastupdated": "2018-08-15T20:07:17"
+    },
+    "swupdate": {
+      "state": "noupdates",
+      "lastinstall": null
+    },
+    "config": {
+      "on": true,
+      "battery": 100,
+      "reachable": true,
+      "alert": "none",
+      "tholddark": 26812,
+      "tholdoffset": 7000,
+      "ledindication": false,
+      "usertest": false,
+      "pending": []
+    },
+    "name": "Hue ambient light sensor 1",
+    "type": "ZLLLightLevel",
+    "modelid": "SML001",
+    "manufacturername": "Philips",
+    "productname": "Hue ambient light sensor",
+    "swversion": "6.1.0.18912",
+    "uniqueid": "00:17:88:01:02:13:92:7a-02-0400",
+    "capabilities": {
+      "certified": true
+    }
+  },
+  "14": {
+    "state": {
+      "status": 0,
+      "lastupdated": "none"
+    },
+    "config": {
+      "on": true,
+      "reachable": true
+    },
+    "name": "presenceState",
+    "type": "CLIPGenericStatus",
+    "modelid": "HUELABSENUM",
+    "manufacturername": "Philips",
+    "swversion": "1.0",
+    "uniqueid": "3:12:6157-529d-4a3d-ad60",
+    "recycle": true
+  },
+  "15": {
+    "state": {
+      "status": 0,
+      "lastupdated": "2018-08-15T20:09:53"
+    },
+    "config": {
+      "on": true,
+      "reachable": true
+    },
+    "name": "MotionSensor 7.Companion",
+    "type": "CLIPGenericStatus",
+    "modelid": "PHA_STATE",
+    "manufacturername": "Philips",
+    "swversion": "1.0",
+    "uniqueid": "MotionSensor 7.Companion",
+    "recycle": true
+  },
+  "16": {
+    "state": {
+      "presence": true,
+      "lastupdated": "2018-08-15T19:35:00"
+    },
+    "config": {
+      "on": true,
+      "reachable": true
+    },
+    "name": "LENOVO Lenovo P2a42",
+    "type": "Geofence",
+    "modelid": "HA_GEOFENCE",
+    "manufacturername": "Philips",
+    "swversion": "A_1",
+    "uniqueid": "L_02_i7HUi",
+    "recycle": true
+  }
+}
