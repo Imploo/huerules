@@ -1,7 +1,6 @@
 import {HttpClient} from '@angular/common/http';
 import {ReplaySubject} from 'rxjs';
 import {BaseEntity} from './baseEntity';
-import {ConfigEntity} from './configEntity';
 import {Injectable} from '@angular/core';
 
 @Injectable()
@@ -14,12 +13,10 @@ export abstract class EntityService<TEntity extends BaseEntity> {
   }
 
   private init(): void {
-    this.entitiesSubject.next([new ConfigEntity(
-      'config',
-      -1,
-      'config',
-      ['localtime']
-    ) as TEntity]);
+    const presets = this.getPresetEntities();
+    if (presets && presets.length > 0) {
+      this.entitiesSubject.next(presets);
+    }
 
     this.getType('lights');
     this.getType('sensors');
@@ -35,6 +32,8 @@ export abstract class EntityService<TEntity extends BaseEntity> {
   }
 
   protected abstract parseEntities(items: any, type: string): TEntity[];
+
+  protected abstract getPresetEntities(): TEntity[];
 
   public getEntityFromAddress(address: string, entities: TEntity[]): TEntity {
     if (address) {

@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { StateComponent } from './rules/state/state.component';
 import {NgSelectModule} from '@ng-select/ng-select';
 import { ActionComponent } from './rules/action/action.component';
+import { BackupComponent } from './backup/backup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RulesListComponent,
     StateComponent,
-    ActionComponent
+    ActionComponent,
+    BackupComponent
   ],
   imports: [
     BrowserModule,
