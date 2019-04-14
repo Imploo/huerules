@@ -1,26 +1,26 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {IRule, IBody, IAction, IPayload, IPayloadAction} from './rule';
+import {HttpClient} from '@angular/common/http';
+import {IAction, IBody, IPayload, IPayloadAction, IRule} from './rule';
+import {ApiService} from '../api/api.service';
+import {Types} from '../api/types.model';
+import {ResponseModel} from '../api/api.model';
 
 @Injectable()
 export class RulesService {
-  private _bridgeUrl = 'http://192.168.178.22/api/BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe/rules';
-  private _dummyUrl = 'api/rules/dummy.json';
-  private _responseUrl = 'api/rules/response.json';
 
-  constructor(private _http: HttpClient) {
+  constructor(private _http: HttpClient, private apiService: ApiService) {
   }
 
   getRules(): Observable<IRule[]> {
-    return this._http.get<IRule[]>(this._bridgeUrl);
-  }
-
-  returnDummy(): Observable<IRule[]> {
-    return this._http.get<IRule[]>(this._dummyUrl);
+    return this.apiService.getType(Types.rules);
   }
 
   public parseRules(rules: IRule[]): IRule[] {
+    if (!rules || rules.length === 0) {
+      return rules;
+    }
+
     return Object.keys(rules).map(i => {
       const rule = rules[i];
       rule.id = +i;
@@ -31,7 +31,7 @@ export class RulesService {
     });
   }
 
-  save(rule: IRule): Observable<Response> {
+  save(rule: IRule): Observable<ResponseModel[]> {
     if (rule.id) {
       return this.putRule(rule);
     }
@@ -39,12 +39,11 @@ export class RulesService {
   }
 
   private postRule(rule: IRule): Observable<any> {
-    return this._http.post(this._bridgeUrl, this.mapToPayload(rule));
+    return this.apiService.postRule(this.mapToPayload(rule));
   }
 
   private putRule(rule: IRule): Observable<any> {
-    const postUrl = this._bridgeUrl + '/' + rule.id;
-    return this._http.put(postUrl, this.mapToPayload(rule));
+    return this.apiService.putRule(this.mapToPayload(rule), rule.id);
   }
 
   private mapToPayload(rule: IRule): IPayload {
@@ -100,6 +99,6 @@ export class RulesService {
   }
 
   delete(id: number): Observable<any> {
-    return this._http.delete(this._bridgeUrl + '/' + id);
+    return this.apiService.deleteRule(id);
   }
 }

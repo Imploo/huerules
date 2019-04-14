@@ -2,36 +2,32 @@ import {HttpClient} from '@angular/common/http';
 import {ReplaySubject} from 'rxjs';
 import {BaseEntity} from './baseEntity';
 import {Injectable} from '@angular/core';
+import {ApiService} from '../../api/api.service';
+import {Types} from '../../api/types.model';
 
 @Injectable()
 export abstract class EntityService<TEntity extends BaseEntity> {
   private entitiesSubject: ReplaySubject<TEntity[]> = new ReplaySubject<TEntity[]>(4);
   public entities = this.entitiesSubject.asObservable();
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private apiService: ApiService) {
     this.init();
   }
 
   private init(): void {
-    const presets = this.getPresetEntities();
-    if (presets && presets.length > 0) {
-      this.entitiesSubject.next(presets);
-    }
-
-    this.getType('lights');
-    this.getType('sensors');
-    this.getType('groups');
+    this.getType(Types.lights);
+    this.getType(Types.sensors);
+    this.getType(Types.groups);
   }
-  private getType(type: string) {
-    this.http.get<any>(`http://192.168.178.22/api/BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe/${type}`)
-      .subscribe(entities => this.entitiesSubject.next(this.parseEntities(entities, type)),
-        () => {
-          this.http.get<any>(`api/rules/${type}.json`)
-            .subscribe(entities => this.entitiesSubject.next(this.parseEntities(entities, type)));
-        });
+  private getType(type: Types) {
+    this.apiService.getType(type)
+      .subscribe(entities => {
+        const newEntities = this.parseEntities(entities, type).concat(this.getPresetEntities());
+        this.entitiesSubject.next(newEntities);
+      });
   }
 
-  protected abstract parseEntities(items: any, type: string): TEntity[];
+  protected abstract parseEntities(items: any, type: Types): TEntity[];
 
   protected abstract getPresetEntities(): TEntity[];
 

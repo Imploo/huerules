@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {EntityService} from '../entities/entity.service';
 import {ActionEntity} from '../entities/actionEntity';
+import {Types} from '../../api/types.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class ActionService extends EntityService<ActionEntity> {
     return [new ActionEntity(
       'All Groups',
       0,
-      'groups',
+      Types.groups,
       [
         'on',
         'bri',
@@ -27,10 +28,10 @@ export class ActionService extends EntityService<ActionEntity> {
     )];
   }
 
-  protected parseEntities(items: any, type: string): ActionEntity[] {
+  protected parseEntities(items: any, type: Types): ActionEntity[] {
     return Object.keys(items).map(i => {
       const item = items[i];
-      const properties = type === 'groups'
+      const properties = type === Types.groups
         ? Object.keys(item.action)
         : Object.keys(item.state);
       return new ActionEntity(item.name, +i, type, properties);

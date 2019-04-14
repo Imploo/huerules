@@ -1,6 +1,9 @@
-<div *ngIf='errorMessage' class='error' (click)='errorMessage = ""'>
-        {{errorMessage}}
+<div *ngIf='errorMessage'
+     [innerHTML]="errorMessage"
+     class='error'
+     (click)='errorMessage = ""'>
 </div>
+<div *ngIf="dummyActive">Dummy values are active!</div>
 <div class='container-fluid'>
     <div class='row' *ngFor='let rule of rules'>
         <div class='col-xs-1'>

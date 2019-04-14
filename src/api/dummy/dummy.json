@@ -1,0 +1,3777 @@
+{
+  "lights": {
+    "1": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "hue": 13401,
+        "sat": 204,
+        "effect": "none",
+        "xy": [
+          0.5052,
+          0.4152
+        ],
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2018-12-07T13:58:07"
+      },
+      "type": "Extended color light",
+      "name": "Grote staandert",
+      "modelid": "LCT007",
+      "manufacturername": "Philips",
+      "productname": "Hue color lamp",
+      "capabilities": {
+        "certified": true,
+        "control": {
+          "mindimlevel": 2000,
+          "maxlumen": 800,
+          "colorgamuttype": "B",
+          "colorgamut": [
+            [
+              0.6750,
+              0.3220
+            ],
+            [
+              0.4090,
+              0.5180
+            ],
+            [
+              0.1670,
+              0.0400
+            ]
+          ],
+          "ct": {
+            "min": 153,
+            "max": 500
+          }
+        },
+        "streaming": {
+          "renderer": true,
+          "proxy": true
+        }
+      },
+      "config": {
+        "archetype": "sultanbulb",
+        "function": "mixed",
+        "direction": "omnidirectional",
+        "startup": {
+          "mode": "safety",
+          "configured": true
+        }
+      },
+      "uniqueid": "00:17:88:01:10:4a:bc:d8-0b",
+      "swversion": "5.127.1.26420"
+    },
+    "2": {
+      "state": {
+        "on": true,
+        "bri": 237,
+        "hue": 3257,
+        "sat": 234,
+        "effect": "none",
+        "xy": [
+          0.6206,
+          0.3493
+        ],
+        "ct": 153,
+        "alert": "none",
+        "colormode": "xy",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2018-12-07T13:58:01"
+      },
+      "type": "Extended color light",
+      "name": "Raketmotor",
+      "modelid": "LCT007",
+      "manufacturername": "Philips",
+      "productname": "Hue color lamp",
+      "capabilities": {
+        "certified": true,
+        "control": {
+          "mindimlevel": 2000,
+          "maxlumen": 800,
+          "colorgamuttype": "B",
+          "colorgamut": [
+            [
+              0.6750,
+              0.3220
+            ],
+            [
+              0.4090,
+              0.5180
+            ],
+            [
+              0.1670,
+              0.0400
+            ]
+          ],
+          "ct": {
+            "min": 153,
+            "max": 500
+          }
+        },
+        "streaming": {
+          "renderer": true,
+          "proxy": true
+        }
+      },
+      "config": {
+        "archetype": "sultanbulb",
+        "function": "mixed",
+        "direction": "omnidirectional",
+        "startup": {
+          "mode": "safety",
+          "configured": true
+        }
+      },
+      "uniqueid": "00:17:88:01:10:4a:be:9c-0b",
+      "swversion": "5.127.1.26420"
+    },
+    "3": {
+      "state": {
+        "on": true,
+        "bri": 237,
+        "hue": 59338,
+        "sat": 248,
+        "effect": "none",
+        "xy": [
+          0.5013,
+          0.2307
+        ],
+        "ct": 443,
+        "alert": "none",
+        "colormode": "xy",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2018-12-07T13:57:56"
+      },
+      "type": "Extended color light",
+      "name": "Flood light",
+      "modelid": "LCT007",
+      "manufacturername": "Philips",
+      "productname": "Hue color lamp",
+      "capabilities": {
+        "certified": true,
+        "control": {
+          "mindimlevel": 2000,
+          "maxlumen": 800,
+          "colorgamuttype": "B",
+          "colorgamut": [
+            [
+              0.6750,
+              0.3220
+            ],
+            [
+              0.4090,
+              0.5180
+            ],
+            [
+              0.1670,
+              0.0400
+            ]
+          ],
+          "ct": {
+            "min": 153,
+            "max": 500
+          }
+        },
+        "streaming": {
+          "renderer": true,
+          "proxy": true
+        }
+      },
+      "config": {
+        "archetype": "sultanbulb",
+        "function": "mixed",
+        "direction": "omnidirectional",
+        "startup": {
+          "mode": "safety",
+          "configured": true
+        }
+      },
+      "uniqueid": "00:17:88:01:10:25:4d:fd-0b",
+      "swversion": "5.127.1.26420"
+    },
+    "4": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2018-12-07T13:57:50"
+      },
+      "type": "Color temperature light",
+      "name": "Kitchen penchant",
+      "modelid": "LTW001",
+      "manufacturername": "Philips",
+      "productname": "Hue ambiance lamp",
+      "capabilities": {
+        "certified": true,
+        "control": {
+          "mindimlevel": 1000,
+          "maxlumen": 806,
+          "ct": {
+            "min": 153,
+            "max": 454
+          }
+        },
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "sultanbulb",
+        "function": "functional",
+        "direction": "omnidirectional",
+        "startup": {
+          "mode": "safety",
+          "configured": true
+        }
+      },
+      "uniqueid": "00:17:88:01:02:b0:a7:a2-0b",
+      "swversion": "5.127.1.26420"
+    },
+    "7": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": false
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Color temperature light",
+      "name": "Hipsterhengel",
+      "modelid": "TRADFRI bulb E27 WS clear 950lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Color temperature light",
+      "capabilities": {
+        "certified": false,
+        "control": {
+          "ct": {
+            "min": 250,
+            "max": 454
+          }
+        },
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "90:fd:9f:ff:fe:6e:5d:7f-01",
+      "swversion": "1.2.217"
+    },
+    "8": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "alert": "none",
+        "mode": "homeautomation",
+        "reachable": false
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Dimmable light",
+      "name": "Par30 spot",
+      "modelid": "TRADFRI bulb GU10 W 400lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Dimmable light",
+      "capabilities": {
+        "certified": false,
+        "control": {},
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "00:0b:57:ff:fe:d6:ce:69-01",
+      "swversion": "1.2.214"
+    },
+    "9": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "hue": 51945,
+        "sat": 252,
+        "effect": "none",
+        "xy": [
+          0.3010,
+          0.1161
+        ],
+        "ct": 153,
+        "alert": "none",
+        "colormode": "xy",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2018-12-07T13:57:32"
+      },
+      "type": "Extended color light",
+      "name": "Spot boog",
+      "modelid": "LCT003",
+      "manufacturername": "Philips",
+      "productname": "Hue color spot",
+      "capabilities": {
+        "certified": true,
+        "control": {
+          "mindimlevel": 5000,
+          "maxlumen": 250,
+          "colorgamuttype": "B",
+          "colorgamut": [
+            [
+              0.6750,
+              0.3220
+            ],
+            [
+              0.4090,
+              0.5180
+            ],
+            [
+              0.1670,
+              0.0400
+            ]
+          ],
+          "ct": {
+            "min": 153,
+            "max": 500
+          }
+        },
+        "streaming": {
+          "renderer": true,
+          "proxy": true
+        }
+      },
+      "config": {
+        "archetype": "spotbulb",
+        "function": "mixed",
+        "direction": "downwards",
+        "startup": {
+          "mode": "safety",
+          "configured": true
+        }
+      },
+      "uniqueid": "00:17:88:01:03:52:c9:f4-0b",
+      "swversion": "5.127.1.26420"
+    },
+    "10": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "hue": 13401,
+        "sat": 204,
+        "effect": "none",
+        "xy": [
+          0.5052,
+          0.4152
+        ],
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2018-12-07T13:57:45"
+      },
+      "type": "Extended color light",
+      "name": "Spot bank",
+      "modelid": "LCT003",
+      "manufacturername": "Philips",
+      "productname": "Hue color spot",
+      "capabilities": {
+        "certified": true,
+        "control": {
+          "mindimlevel": 5000,
+          "maxlumen": 250,
+          "colorgamuttype": "B",
+          "colorgamut": [
+            [
+              0.6750,
+              0.3220
+            ],
+            [
+              0.4090,
+              0.5180
+            ],
+            [
+              0.1670,
+              0.0400
+            ]
+          ],
+          "ct": {
+            "min": 153,
+            "max": 500
+          }
+        },
+        "streaming": {
+          "renderer": true,
+          "proxy": true
+        }
+      },
+      "config": {
+        "archetype": "spotbulb",
+        "function": "mixed",
+        "direction": "downwards",
+        "startup": {
+          "mode": "safety",
+          "configured": true
+        }
+      },
+      "uniqueid": "00:17:88:01:03:52:ba:d5-0b",
+      "swversion": "5.127.1.26420"
+    },
+    "13": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "alert": "none",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Dimmable light",
+      "name": "Dimmable light 2",
+      "modelid": "TRADFRI bulb E27 W opal 1000lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Dimmable light",
+      "capabilities": {
+        "certified": false,
+        "control": {},
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "90:fd:9f:ff:fe:6c:8b:79-01",
+      "swversion": "1.2.214"
+    },
+    "14": {
+      "state": {
+        "on": true,
+        "bri": 144,
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Color temperature light",
+      "name": "Movie spot",
+      "modelid": "TRADFRI bulb GU10 WS 400lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Color temperature light",
+      "capabilities": {
+        "certified": false,
+        "control": {
+          "ct": {
+            "min": 250,
+            "max": 454
+          }
+        },
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "90:fd:9f:ff:fe:d6:87:3c-01",
+      "swversion": "1.2.217"
+    },
+    "15": {
+      "state": {
+        "on": false,
+        "bri": 1,
+        "alert": "none",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Dimmable light",
+      "name": "Toilet",
+      "modelid": "TRADFRI bulb E27 W opal 1000lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Dimmable light",
+      "capabilities": {
+        "certified": false,
+        "control": {},
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "90:fd:9f:ff:fe:4c:f8:55-01",
+      "swversion": "1.2.214"
+    },
+    "16": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "alert": "none",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Dimmable light",
+      "name": "Gasfornuis",
+      "modelid": "TRADFRI bulb GU10 W 400lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Dimmable light",
+      "capabilities": {
+        "certified": false,
+        "control": {},
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "00:0b:57:ff:fe:d7:89:7e-01",
+      "swversion": "1.2.214"
+    },
+    "17": {
+      "state": {
+        "on": true,
+        "bri": 144,
+        "ct": 454,
+        "alert": "select",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Color temperature light",
+      "name": "Bathroom",
+      "modelid": "TRADFRI bulb E27 WS opal 980lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Color temperature light",
+      "capabilities": {
+        "certified": false,
+        "control": {
+          "ct": {
+            "min": 250,
+            "max": 454
+          }
+        },
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "00:0b:57:ff:fe:da:0b:a3-01",
+      "swversion": "1.2.217"
+    },
+    "18": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Color temperature light",
+      "name": "Spot slaapkamer",
+      "modelid": "TRADFRI bulb GU10 WS 400lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Color temperature light",
+      "capabilities": {
+        "certified": false,
+        "control": {
+          "ct": {
+            "min": 250,
+            "max": 454
+          }
+        },
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "d0:cf:5e:ff:fe:09:63:5b-01",
+      "swversion": "1.2.217"
+    },
+    "19": {
+      "state": {
+        "on": true,
+        "bri": 254,
+        "alert": "none",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Dimmable light",
+      "name": "Dimmable light 3",
+      "modelid": "TRADFRI bulb E27 W opal 1000lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Dimmable light",
+      "capabilities": {
+        "certified": false,
+        "control": {},
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "90:fd:9f:ff:fe:35:de:85-01",
+      "swversion": "1.2.214"
+    },
+    "20": {
+      "state": {
+        "on": true,
+        "bri": 144,
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct",
+        "mode": "homeautomation",
+        "reachable": true
+      },
+      "swupdate": {
+        "state": "notupdatable",
+        "lastinstall": null
+      },
+      "type": "Color temperature light",
+      "name": "Color temperature light 1",
+      "modelid": "TRADFRI bulb E27 WS opal 980lm",
+      "manufacturername": "IKEA of Sweden",
+      "productname": "Color temperature light",
+      "capabilities": {
+        "certified": false,
+        "control": {
+          "ct": {
+            "min": 250,
+            "max": 454
+          }
+        },
+        "streaming": {
+          "renderer": false,
+          "proxy": false
+        }
+      },
+      "config": {
+        "archetype": "classicbulb",
+        "function": "functional",
+        "direction": "omnidirectional"
+      },
+      "uniqueid": "90:fd:9f:ff:fe:d4:22:75-01",
+      "swversion": "1.2.217"
+    }
+  },
+  "groups": {
+    "1": {
+      "name": "Living colors",
+      "lights": [
+        "9",
+        "3",
+        "2"
+      ],
+      "sensors": [],
+      "type": "Room",
+      "state": {
+        "all_on": true,
+        "any_on": true
+      },
+      "recycle": false,
+      "class": "Living room",
+      "action": {
+        "on": true,
+        "bri": 237,
+        "hue": 3257,
+        "sat": 234,
+        "effect": "none",
+        "xy": [
+          0.6206,
+          0.3493
+        ],
+        "ct": 153,
+        "alert": "none",
+        "colormode": "xy"
+      }
+    },
+    "2": {
+      "name": "Living whites",
+      "lights": [
+        "20",
+        "7",
+        "4",
+        "14"
+      ],
+      "sensors": [],
+      "type": "Room",
+      "state": {
+        "all_on": true,
+        "any_on": true
+      },
+      "recycle": false,
+      "class": "Living room",
+      "action": {
+        "on": true,
+        "bri": 144,
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct"
+      }
+    },
+    "3": {
+      "name": "Only dimmables",
+      "lights": [
+        "16",
+        "8"
+      ],
+      "sensors": [],
+      "type": "Room",
+      "state": {
+        "all_on": true,
+        "any_on": true
+      },
+      "recycle": false,
+      "class": "Living room",
+      "action": {
+        "on": true,
+        "bri": 254,
+        "alert": "none"
+      }
+    },
+    "4": {
+      "name": "Gang",
+      "lights": [
+        "19",
+        "13"
+      ],
+      "sensors": [],
+      "type": "Room",
+      "state": {
+        "all_on": true,
+        "any_on": true
+      },
+      "recycle": false,
+      "class": "Living room",
+      "action": {
+        "on": true,
+        "bri": 254,
+        "alert": "none"
+      }
+    },
+    "5": {
+      "name": "Sleeping room",
+      "lights": [
+        "10",
+        "1",
+        "18"
+      ],
+      "sensors": [],
+      "type": "Room",
+      "state": {
+        "all_on": true,
+        "any_on": true
+      },
+      "recycle": false,
+      "class": "Living room",
+      "action": {
+        "on": true,
+        "bri": 254,
+        "hue": 13401,
+        "sat": 204,
+        "effect": "none",
+        "xy": [
+          0.5052,
+          0.4152
+        ],
+        "ct": 454,
+        "alert": "none",
+        "colormode": "ct"
+      }
+    },
+    "6": {
+      "name": "Toilet",
+      "lights": [
+        "15"
+      ],
+      "sensors": [],
+      "type": "Room",
+      "state": {
+        "all_on": false,
+        "any_on": false
+      },
+      "recycle": false,
+      "class": "Bathroom",
+      "action": {
+        "on": false,
+        "bri": 1,
+        "alert": "none"
+      }
+    },
+    "7": {
+      "name": "Bathroom",
+      "lights": [
+        "17"
+      ],
+      "sensors": [],
+      "type": "Room",
+      "state": {
+        "all_on": true,
+        "any_on": true
+      },
+      "recycle": false,
+      "class": "Bathroom",
+      "action": {
+        "on": true,
+        "bri": 144,
+        "ct": 454,
+        "alert": "select",
+        "colormode": "ct"
+      }
+    }
+  },
+  "config": {
+    "name": "Philips hue",
+    "zigbeechannel": 11,
+    "bridgeid": "001788FFFE28F9C4",
+    "mac": "00:17:88:28:f9:c4",
+    "dhcp": true,
+    "ipaddress": "192.168.2.4",
+    "netmask": "255.255.255.0",
+    "gateway": "192.168.2.254",
+    "proxyaddress": "none",
+    "proxyport": 0,
+    "UTC": "2019-04-14T18:55:13",
+    "localtime": "2019-04-14T20:55:13",
+    "timezone": "Europe/Amsterdam",
+    "modelid": "BSB002",
+    "datastoreversion": "80",
+    "swversion": "1931069120",
+    "apiversion": "1.31.0",
+    "swupdate": {
+      "updatestate": 0,
+      "checkforupdate": false,
+      "devicetypes": {
+        "bridge": false,
+        "lights": [],
+        "sensors": []
+      },
+      "url": "",
+      "text": "",
+      "notify": true
+    },
+    "swupdate2": {
+      "checkforupdate": false,
+      "lastchange": "2019-04-07T09:58:51",
+      "bridge": {
+        "state": "noupdates",
+        "lastinstall": "2019-04-04T12:06:45"
+      },
+      "state": "noupdates",
+      "autoinstall": {
+        "updatetime": "T14:00:00",
+        "on": true
+      }
+    },
+    "linkbutton": false,
+    "portalservices": true,
+    "portalconnection": "connected",
+    "portalstate": {
+      "signedon": true,
+      "incoming": false,
+      "outgoing": true,
+      "communication": "disconnected"
+    },
+    "internetservices": {
+      "internet": "connected",
+      "remoteaccess": "connected",
+      "time": "connected",
+      "swupdate": "connected"
+    },
+    "factorynew": false,
+    "replacesbridgeid": null,
+    "backup": {
+      "status": "idle",
+      "errorcode": 0
+    },
+    "starterkitid": "",
+    "whitelist": {
+      "e32329a2-f08b-41a0-b7b8-0c72b94cdfae": {
+        "last use date": "2017-02-15T16:47:52",
+        "create date": "2016-10-01T15:18:06",
+        "name": "Hue 2#Wileyfox Swift"
+      },
+      "99a2809e-2264-45a0-b186-56b028056b4f": {
+        "last use date": "2016-10-02T08:36:38",
+        "create date": "2016-10-01T18:21:15",
+        "name": "Huemanic#Wileyfox Swift"
+      },
+      "7cf6b19b-c3d9-4eaa-aa3e-8540a16b72ac": {
+        "last use date": "2016-10-06T21:51:37",
+        "create date": "2016-10-01T18:34:09",
+        "name": "HueDiscoBridgeConnec#Wileyfox Swift"
+      },
+      "d47fc35b-1c4d-411f-9442-d6166b1531ca": {
+        "last use date": "2016-10-07T22:36:38",
+        "create date": "2016-10-03T18:45:48",
+        "name": "OnSwitch#Wileyfox Swift"
+      },
+      "52805ace-b2b6-4a50-95a4-f059c6b05b4b": {
+        "last use date": "2016-10-08T07:51:38",
+        "create date": "2016-10-05T17:42:36",
+        "name": "autohue#android"
+      },
+      "f7e01d9c-3c94-41f3-b20e-44dce041ac4d": {
+        "last use date": "2016-10-05T18:51:37",
+        "create date": "2016-10-05T18:41:11",
+        "name": "Twilight#Wileyfox Swift"
+      },
+      "1106a421-f412-439f-9983-d7375478d20e": {
+        "last use date": "2016-11-11T17:31:37",
+        "create date": "2016-10-08T13:03:54",
+        "name": "OnSwitch#Wileyfox Swift"
+      },
+      "c8b4f385-295a-4ece-92b5-a5f6aee15ed8": {
+        "last use date": "2017-02-15T18:47:52",
+        "create date": "2016-10-08T13:05:10",
+        "name": "HueDiscoBridgeConnec#Wileyfox Swift"
+      },
+      "209e5d86-3117-4d88-a922-979a0883c0e6": {
+        "last use date": "2017-02-15T09:02:52",
+        "create date": "2016-10-08T15:20:06",
+        "name": "autohue#android"
+      },
+      "608f4477-f4b7-4cf3-919b-b5a8da2ecd93": {
+        "last use date": "2016-10-10T19:33:56",
+        "create date": "2016-10-10T19:31:39",
+        "name": "SleepAsAndroid#Wileyfox Swift"
+      },
+      "451f8b46-09ec-4e2b-a7b6-74b76622b2b4": {
+        "last use date": "2019-04-14T18:19:11",
+        "create date": "2016-10-14T08:35:26",
+        "name": "iftttv2"
+      },
+      "7bbdefb3-4387-4761-a7fb-72ae8329d28b": {
+        "last use date": "2017-05-11T22:09:37",
+        "create date": "2017-02-16T08:01:30",
+        "name": "Hue 2#Wileyfox Swift"
+      },
+      "d6ebf23e-8c5f-4192-a55b-126ed0ef55a2": {
+        "last use date": "2017-02-17T08:22:37",
+        "create date": "2017-02-16T22:45:07",
+        "name": "SleepAsAndroid#Wileyfox Swift"
+      },
+      "419f35f3-5999-4601-9348-d02cbae7c8d8": {
+        "last use date": "2017-02-17T18:37:38",
+        "create date": "2017-02-17T16:50:33",
+        "name": "HueDiscoBridgeConnec#Wileyfox Swift"
+      },
+      "97b3f692-af89-473b-9869-1ae4f7a8f535": {
+        "last use date": "2017-05-12T05:09:37",
+        "create date": "2017-02-17T16:51:27",
+        "name": "autohue#android"
+      },
+      "56db3447-9c36-45b3-8989-21b998b72475": {
+        "last use date": "2017-04-15T18:09:32",
+        "create date": "2017-02-24T21:40:04",
+        "name": "HueDiscoBridgeConnec#Wileyfox Swift"
+      },
+      "7e0bfb3f-47d8-4c48-b4b4-e8853ca8f05f": {
+        "last use date": "2017-10-10T05:14:42",
+        "create date": "2017-05-13T22:19:26",
+        "name": "Hue 2#Wileyfox Swift"
+      },
+      "5812c93f-838b-4899-a2f7-795aec0294c6": {
+        "last use date": "2017-05-13T22:24:38",
+        "create date": "2017-05-13T22:20:07",
+        "name": "QuickHue#Wileyfox Swift"
+      },
+      "be83f3de-fb3f-471e-adca-e8bc4ee9a7b9": {
+        "last use date": "2017-10-10T05:14:42",
+        "create date": "2017-05-16T20:26:29",
+        "name": "SleepAsAndroid#Wileyfox Swift"
+      },
+      "665cc55f-93ba-484b-95d5-0a6468e66386": {
+        "last use date": "2017-11-23T22:56:33",
+        "create date": "2017-09-19T22:01:16",
+        "name": "Hue 2#Samsung SM-J530F"
+      },
+      "66496117-ca83-4b67-bb10-7651dcafe680": {
+        "last use date": "2017-10-08T21:44:42",
+        "create date": "2017-09-19T22:04:06",
+        "name": "HueDiscoBridgeConnec#Wileyfox Swift"
+      },
+      "fb150846-9685-4c30-abe1-db3170a69f2c": {
+        "last use date": "2017-09-28T20:47:18",
+        "create date": "2017-09-28T18:58:16",
+        "name": "HueDiscoBridgeConnec#HUAWEI G525-U00"
+      },
+      "13f0cc44-4bb3-4b27-86f4-9533cfa21b3b": {
+        "last use date": "2018-04-09T04:55:38",
+        "create date": "2017-10-10T17:01:23",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      },
+      "c9bb4f7a-d835-4b4a-9d93-8773ad552c54": {
+        "last use date": "2018-04-09T15:55:37",
+        "create date": "2017-10-10T17:01:52",
+        "name": "Hue 2#LENOVO Lenovo P2a42"
+      },
+      "92f2a883-d3bc-423a-b0db-4b53598d1a8c": {
+        "last use date": "2018-01-12T18:57:07",
+        "create date": "2017-10-10T17:02:13",
+        "name": "HueDiscoBridgeConnec#Lenovo P2a42"
+      },
+      "8a4ac82d-9361-449f-87fc-cbc82b024ea4": {
+        "last use date": "2018-01-06T12:36:00",
+        "create date": "2018-01-01T22:45:02",
+        "name": "Hue 2#Samsung SM-J530F"
+      },
+      "b43b5d18-56f9-432f-b261-a76e01d1c742": {
+        "last use date": "2018-03-20T20:18:01",
+        "create date": "2018-01-07T10:44:56",
+        "name": "all 4 hue#Lenovo P2a42"
+      },
+      "278701a9-c98e-459a-8f38-d23343ca8558": {
+        "last use date": "2018-03-19T17:02:47",
+        "create date": "2018-01-09T06:44:54",
+        "name": "Hue Essentials#Lenovo P2a42"
+      },
+      "df56b82e-b541-4f68-90d8-0d660cfe4848": {
+        "last use date": "2018-01-10T20:57:06",
+        "create date": "2018-01-09T19:18:20",
+        "name": "huelabs2#Chrome WebView - An"
+      },
+      "aafdfda1-5f54-48fa-bc48-4c2f0f6e4305": {
+        "last use date": "2018-01-09T20:42:07",
+        "create date": "2018-01-09T20:40:11",
+        "name": "huelabs2#Chrome - Android"
+      },
+      "97613ef7-d9cc-4f81-9ed2-b2955b9a7e62": {
+        "last use date": "2018-01-31T21:06:01",
+        "create date": "2018-01-09T20:40:12",
+        "name": "iLightShow-Android"
+      },
+      "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe": {
+        "last use date": "2019-04-14T18:55:13",
+        "create date": "2018-01-10T17:18:52",
+        "name": "clip#matt"
+      },
+      "1abf9290-2cb0-46be-ad08-bd606ee3d5b1": {
+        "last use date": "2018-01-13T13:57:08",
+        "create date": "2018-01-10T17:29:53",
+        "name": "WinHue"
+      },
+      "1c4c7851-f961-492c-8a3e-c72e2d7e1ab6": {
+        "last use date": "2018-03-19T19:47:47",
+        "create date": "2018-01-31T17:15:35",
+        "name": "HueDiscoBridgeConnec#Lenovo P2a42"
+      },
+      "ce56f8de-978c-4d24-b9cc-4a1c9a89c8e6": {
+        "last use date": "2018-04-18T04:57:16",
+        "create date": "2018-04-09T20:43:47",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      },
+      "4d7410e1-ce4c-4136-81c2-aa9336073304": {
+        "last use date": "2018-04-18T04:57:16",
+        "create date": "2018-04-09T20:46:17",
+        "name": "Hue 2#LENOVO Lenovo P2a42"
+      },
+      "3d719133-0477-43ba-90df-2e382e90b050": {
+        "last use date": "2019-01-13T07:47:42",
+        "create date": "2018-04-18T20:06:39",
+        "name": "Hue 2#LENOVO Lenovo P2a42"
+      },
+      "686c7c76-0b68-488c-907d-0402a1a9edb2": {
+        "last use date": "2018-07-02T05:37:32",
+        "create date": "2018-04-18T21:17:30",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      },
+      "94f77da1-eee9-460f-a633-408780f5bf9b": {
+        "last use date": "2018-12-24T19:58:10",
+        "create date": "2018-05-06T20:11:58",
+        "name": "Hue Essentials#Lenovo P2a42"
+      },
+      "c76d50e2-85e9-442c-b1e1-eacda60248d8": {
+        "last use date": "2018-10-01T05:13:56",
+        "create date": "2018-07-03T20:33:06",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      },
+      "975f9f03-375c-41cc-a3df-5d250b1fd1fd": {
+        "last use date": "2018-08-20T19:52:17",
+        "create date": "2018-08-13T20:16:02",
+        "name": "all 4 hue#Lenovo P2a42"
+      },
+      "e12d6747-5d89-4019-9674-bb776a6aa069": {
+        "last use date": "2018-11-29T06:33:58",
+        "create date": "2018-10-17T21:05:39",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      },
+      "2285c78f-665d-476c-9939-49f7d0932cbf": {
+        "last use date": "2019-01-03T07:56:44",
+        "create date": "2018-12-19T21:51:30",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      },
+      "65aa7c4a-31fe-407d-946d-4ce661d70cda": {
+        "last use date": "2018-12-24T17:58:10",
+        "create date": "2018-12-24T17:44:54",
+        "name": "huelabs-2"
+      },
+      "4070c284-03f8-4f7d-a7dc-e8676b55807f": {
+        "last use date": "2018-12-24T19:13:10",
+        "create date": "2018-12-24T17:55:22",
+        "name": "OnSwitch#Lenovo P2a42"
+      },
+      "3e7a46ad-c4bb-44e8-8df0-ed62218f3c15": {
+        "last use date": "2019-01-13T07:32:42",
+        "create date": "2019-01-03T07:53:13",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      },
+      "9bcad7f5-3b22-49ea-a6c3-915246e7cc68": {
+        "last use date": "2019-04-14T18:26:22",
+        "create date": "2019-01-13T14:40:41",
+        "name": "Hue 3#LENOVO Lenovo P2a42"
+      },
+      "7c47390d-36c6-458d-a9f3-c5197a8b66c6": {
+        "last use date": "2019-04-14T05:47:22",
+        "create date": "2019-01-13T19:21:56",
+        "name": "SleepAsAndroid#Lenovo P2a42"
+      }
+    }
+  },
+  "schedules": {},
+  "scenes": {
+    "MVP5pDl-S36AgN7": {
+      "name": "Geel paars",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "EhDtX_r01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:37",
+      "version": 2
+    },
+    "PpTSYgMCiUrD8zo": {
+      "name": "Energie",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "HKaN9_r01_d04"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:35",
+      "version": 2
+    },
+    "iKRgj-hJYCqK9M9": {
+      "name": "Lezen",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "7eQBX_r01_d02"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:35",
+      "version": 2
+    },
+    "tNEwpV2vyCib1Wz": {
+      "name": "Concentreren",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "O9Paw_r01_d03"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:35",
+      "version": 2
+    },
+    "QFhAFFBLKBZLnYJ": {
+      "name": "Gedimd",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "O33yk_r01_d06"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:36",
+      "version": 2
+    },
+    "n-iGiIHSf5XxQVx": {
+      "name": "Love me like you do",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "TmCzc_r01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:38",
+      "version": 2
+    },
+    "8erL53Unh2KxRqa": {
+      "name": "Ontspannen",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "8nb14_r01_d01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:35",
+      "version": 2
+    },
+    "HjtnY0yJCWrPoGx": {
+      "name": "Tropische schemering",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "xDqVH_r01_d16"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:34",
+      "version": 2
+    },
+    "AJVfcDUqewjEs8F": {
+      "name": "Bright",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "TxIgf_r01_d05"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:35",
+      "version": 2
+    },
+    "4acQ2dS0POoBL0m": {
+      "name": "Nightlight",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "kL1dA_r01_d07"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:36",
+      "version": 2
+    },
+    "zFgbKEL4C0fUXpl": {
+      "name": "Savanne zonsondergang",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "Jiiiw_r01_d15"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:34",
+      "version": 2
+    },
+    "4y9LKzGKTBWrhre": {
+      "name": "Living.Day",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "lI0If_r01_d99"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:37",
+      "version": 2
+    },
+    "uAdTx-8vj5TlXBP": {
+      "name": "Relax",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "B04eg_r02_d01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:33",
+      "version": 2
+    },
+    "wUX0URE4EiaRjzj": {
+      "name": "Uit",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "rAiJ4_r00_d19"
+      },
+      "picture": "",
+      "lastupdated": "2018-05-04T19:57:23",
+      "version": 2
+    },
+    "tGjrzJKDVp8ykkn": {
+      "name": "Ontspannen",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "WmfRQ_r00_d01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-28T08:56:09",
+      "version": 2
+    },
+    "yEaDEZOb1Tj1fod": {
+      "name": "Lezen",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "u5K4K_r00_d02"
+      },
+      "picture": "",
+      "lastupdated": "2018-05-04T19:57:08",
+      "version": 2
+    },
+    "j7vGAHMIjKTRW76": {
+      "name": "Sundown",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "pt3Pk_r01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:38",
+      "version": 2
+    },
+    "5x4HZGISJIp79je": {
+      "name": "Read",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "IEW7G_r02_d02"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:33",
+      "version": 2
+    },
+    "7KBmm91is0NH3aq": {
+      "name": "Concentrate",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "ZEGpL_r02_d03"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:33",
+      "version": 2
+    },
+    "2D9uBzF4vWDfvDP": {
+      "name": "Energize",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "yMulk_r02_d04"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:34",
+      "version": 2
+    },
+    "zNEGg42yZMU-r4m": {
+      "name": "Spring blossom",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "8HV13_r02_d18"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:34",
+      "version": 2
+    },
+    "ClHHzjAKh7OrvGO": {
+      "name": "Arctic aurora",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "yYz3X_r02_d17"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:34",
+      "version": 2
+    },
+    "1JmYr9vGlR6ny-8": {
+      "name": "Bright",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "UNNRr_r02_d05"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:35",
+      "version": 2
+    },
+    "4zWl-PtZNuakY1b": {
+      "name": "Savanna sunset",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "MtIsV_r02_d15"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:34",
+      "version": 2
+    },
+    "2hb-BPY27cgilxm": {
+      "name": "Tropical twilight",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "6JobR_r02_d16"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:34",
+      "version": 2
+    },
+    "xQou5SjlOg6487H": {
+      "name": "Dimmed",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "mFdJZ_r02_d06"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:35",
+      "version": 2
+    },
+    "QeQ7t9Gj9vCFZmq": {
+      "name": "Nightlight",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "E4VdZ_r02_d07"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:35",
+      "version": 2
+    },
+    "Nfh13hOLtZvSo58": {
+      "name": "Recover room 0",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "HRs7M_r00_h01"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-11T18:58:31",
+      "version": 2
+    },
+    "g9qSLXwOLpc-l09": {
+      "name": "Nightlight",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "5wicH_r00_d07"
+      },
+      "picture": "",
+      "lastupdated": "2018-05-04T19:57:21",
+      "version": 2
+    },
+    "3NewTmDnZIgrJVv": {
+      "name": "Dimmed",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10",
+        "13",
+        "14",
+        "15"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "yZ4XD_r00_d06"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-14T21:11:49",
+      "version": 2
+    },
+    "kIgTHIhqWgA5Hq9": {
+      "name": "Scène 1",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "C3iIs_r01_d99"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:36",
+      "version": 2
+    },
+    "jwBqZNgy2BmDISI": {
+      "name": "Paars",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "qDyfB_r01_d99"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:37",
+      "version": 2
+    },
+    "yeSphlNe3PQ9R4t": {
+      "name": "Groen paars",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "esUjY_r01_d99"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:38",
+      "version": 2
+    },
+    "qPaDxzBNGnHX7Sj": {
+      "name": "Bright",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "3UL4k_r00_d05"
+      },
+      "picture": "",
+      "lastupdated": "2018-05-04T19:57:16",
+      "version": 2
+    },
+    "XayjEj9BOss3-Ta": {
+      "name": "Concentrate",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "ut8oe_r00_d03"
+      },
+      "picture": "",
+      "lastupdated": "2018-05-04T19:57:10",
+      "version": 2
+    },
+    "stmVeWvLEsX7Wq9": {
+      "name": "Energize",
+      "type": "LightScene",
+      "lights": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "12l1E_r00_d04"
+      },
+      "picture": "",
+      "lastupdated": "2018-05-04T19:57:15",
+      "version": 2
+    },
+    "rCPSVak2xV1emNh": {
+      "name": "Mood",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "1Aa3K_r01_d99"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:37",
+      "version": 2
+    },
+    "Wxg8lw-iHdYY-9t": {
+      "name": "Avond",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "iK8at_r02_d99"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:35",
+      "version": 2
+    },
+    "vRkZ-jWIH-V9wg8": {
+      "name": "Bright",
+      "type": "GroupScene",
+      "group": "3",
+      "lights": [
+        "8",
+        "16"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "AouH5_r03_d05"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-20T06:32:51",
+      "version": 2
+    },
+    "qRs2Zm1O97uzjlM": {
+      "name": "Dimmed",
+      "type": "GroupScene",
+      "group": "3",
+      "lights": [
+        "8",
+        "16"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "geEA5_r03_d06"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-20T06:32:52",
+      "version": 2
+    },
+    "mjNZts9KoP8Hugf": {
+      "name": "Nightlight",
+      "type": "GroupScene",
+      "group": "3",
+      "lights": [
+        "8",
+        "16"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "d17cu_r03_d07"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-20T06:32:52",
+      "version": 2
+    },
+    "hB79K7ON-xPnLsz": {
+      "name": "Relax",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "Jfswe_r05_d01"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "rsVeM2VnBxcJ3x3": {
+      "name": "Scene myScene1 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:45:59",
+      "version": 2
+    },
+    "Cfzmu1Uh2oabPCT": {
+      "name": "Scene myScene2 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:46:00",
+      "version": 2
+    },
+    "wXmgwMwgDsOtWDO": {
+      "name": "Scene myScene3 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:46:00",
+      "version": 2
+    },
+    "CVmJNsocFFOIhyl": {
+      "name": "Scene myScene4 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:46:01",
+      "version": 2
+    },
+    "uhypwEbb1N9fCN1": {
+      "name": "Read",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "CUuBa_r05_d02"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "I3uZPWVxZL6DkL5": {
+      "name": "Scene myScene1 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:46:52",
+      "version": 2
+    },
+    "ajVypUhCXpgv64S": {
+      "name": "Scene myScene2 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:46:52",
+      "version": 2
+    },
+    "7IcWzIkTpIrAbMB": {
+      "name": "Scene myScene3 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:46:52",
+      "version": 2
+    },
+    "6ri5jYQTQ3-dbhz": {
+      "name": "Scene myScene4 ",
+      "type": "LightScene",
+      "lights": [
+        "2"
+      ],
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": true,
+      "locked": false,
+      "appdata": {},
+      "picture": "",
+      "lastupdated": "2018-12-24T17:46:53",
+      "version": 2
+    },
+    "lWYsR0CbPX361eD": {
+      "name": "Concentrate",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "XRODw_r05_d03"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "U0mCUafZe0CqzND": {
+      "name": "Recover room 1",
+      "type": "GroupScene",
+      "group": "1",
+      "lights": [
+        "2",
+        "3",
+        "9"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "gXziH_r01_h01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:56:38",
+      "version": 2
+    },
+    "zmGXnrhNAeYTA7b": {
+      "name": "Recover room 3",
+      "type": "GroupScene",
+      "group": "3",
+      "lights": [
+        "8",
+        "16"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "VsUGZ_r03_h01"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-20T06:32:52",
+      "version": 2
+    },
+    "eYFybNZepvo1TIF": {
+      "name": "Recover room 2",
+      "type": "GroupScene",
+      "group": "2",
+      "lights": [
+        "4",
+        "7",
+        "14",
+        "20"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": true,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "BP2Ct_r02_h01"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:52:36",
+      "version": 2
+    },
+    "hjMkAR4J3lMMnxo": {
+      "name": "Bright",
+      "type": "GroupScene",
+      "group": "6",
+      "lights": [
+        "15"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "Gj8cm_r06_d05"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-13T20:05:31",
+      "version": 2
+    },
+    "HYn8lderJ8Ttqyo": {
+      "name": "Dimmed",
+      "type": "GroupScene",
+      "group": "6",
+      "lights": [
+        "15"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "CyQ5h_r06_d06"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-13T20:05:31",
+      "version": 2
+    },
+    "YIA7DxkZsF9WiLj": {
+      "name": "Nightlight",
+      "type": "GroupScene",
+      "group": "6",
+      "lights": [
+        "15"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "lppPz_r06_d07"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-13T20:05:31",
+      "version": 2
+    },
+    "d3D1VQz6Rksb-7c": {
+      "name": "Energize",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "HaRt1_r05_d04"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "8DxKa8R8a-ZPskf": {
+      "name": "Relax",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "yC017_r07_d01"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:32",
+      "version": 2
+    },
+    "h0T5E4V5cedsvkf": {
+      "name": "Read",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "yoXTm_r07_d02"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "oUYBwOPENgL0lXC": {
+      "name": "Concentrate",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "U4Mxu_r07_d03"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "QulEN8l42sHR6Dt": {
+      "name": "Energize",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "v64T6_r07_d04"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "qty7hXQpSd3U4tI": {
+      "name": "Savanna sunset",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "mnxDq_r07_d15"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "pj5qkhBxxfUyPx2": {
+      "name": "Tropical twilight",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "12LNv_r07_d16"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "mpsiOWqozlvIQGt": {
+      "name": "Arctic aurora",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "gLyBw_r07_d17"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "d92ai7ajLxLD1Fp": {
+      "name": "Spring blossom",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "aF0wd_r07_d18"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "UjrHOlkBkPxFXGf": {
+      "name": "Bright",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "wrwKO_r07_d05"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "Dvp9EVae2fv1-vA": {
+      "name": "Dimmed",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "55KXN_r07_d06"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "WhjSU1R-qw4nRVF": {
+      "name": "Nightlight",
+      "type": "GroupScene",
+      "group": "7",
+      "lights": [
+        "17"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "3TRLk_r07_d07"
+      },
+      "picture": "",
+      "lastupdated": "2018-08-31T09:16:33",
+      "version": 2
+    },
+    "UCtr3Y39bzIEuRd": {
+      "name": "Savanna sunset",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "M4OrG_r05_d15"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:58",
+      "version": 2
+    },
+    "2MvklF26OXuYOQV": {
+      "name": "Tropical twilight",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "u5LSC_r05_d16"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:58",
+      "version": 2
+    },
+    "Q6z5wX8DLNxnOO4": {
+      "name": "Arctic aurora",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "Qh7Qm_r05_d17"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "UEi1qGDzR89RhLl": {
+      "name": "Spring blossom",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "z2SXX_r05_d18"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "PCTIAjlqHW-er9m": {
+      "name": "Bright",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "zSokH_r05_d05"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "MGAkO1Avke-MPBh": {
+      "name": "Dimmed",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "I6vP2_r05_d06"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "u1bCiY07-bYFyj-": {
+      "name": "Nightlight",
+      "type": "GroupScene",
+      "group": "5",
+      "lights": [
+        "1",
+        "10",
+        "18"
+      ],
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "82m9h_r05_d07"
+      },
+      "picture": "",
+      "lastupdated": "2019-03-24T20:27:59",
+      "version": 2
+    },
+    "Kx1e48yY1n4As8z": {
+      "name": "Bright",
+      "type": "GroupScene",
+      "group": "4",
+      "lights": [
+        "13",
+        "19"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "9hKw3_r04_d05"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:46:14",
+      "version": 2
+    },
+    "DCWMLhCO9yTyX0J": {
+      "name": "Dimmed",
+      "type": "GroupScene",
+      "group": "4",
+      "lights": [
+        "13",
+        "19"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "dh4eJ_r04_d06"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:46:14",
+      "version": 2
+    },
+    "ceqXLUW0goHLhwy": {
+      "name": "Nightlight",
+      "type": "GroupScene",
+      "group": "4",
+      "lights": [
+        "13",
+        "19"
+      ],
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "locked": false,
+      "appdata": {
+        "version": 1,
+        "data": "M6nWr_r04_d07"
+      },
+      "picture": "",
+      "lastupdated": "2018-12-24T19:46:14",
+      "version": 2
+    }
+  },
+  "rules": {
+    "1": {
+      "name": "MotionSensor 7.day-on",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-11T20:57:38",
+      "lasttriggered": "none",
+      "timestriggered": 0,
+      "status": "enabled",
+      "recycle": true,
+      "conditions": [
+        {
+          "address": "/config/localtime",
+          "operator": "in",
+          "value": "T07:00:00/T23:30:00"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/sensors/15/state",
+          "method": "PUT",
+          "body": {
+            "status": 1
+          }
+        }
+      ]
+    },
+    "2": {
+      "name": "MotionSensor 7.evening-on",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:07:04",
+      "lasttriggered": "none",
+      "timestriggered": 0,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/config/localtime",
+          "operator": "in",
+          "value": "T13:00:00/T23:30:00"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "dx"
+        },
+        {
+          "address": "/sensors/1/state/daylight",
+          "operator": "eq",
+          "value": "false"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/sensors/15/state",
+          "method": "PUT",
+          "body": {
+            "status": 2
+          }
+        }
+      ]
+    },
+    "3": {
+      "name": "MotionSensor 7.night-on",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-11T20:57:38",
+      "lasttriggered": "2019-04-13T22:48:50",
+      "timestriggered": 17,
+      "status": "enabled",
+      "recycle": true,
+      "conditions": [
+        {
+          "address": "/config/localtime",
+          "operator": "in",
+          "value": "T23:15:00/T07:30:00"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/sensors/15/state",
+          "method": "PUT",
+          "body": {
+            "status": 3
+          }
+        }
+      ]
+    },
+    "4": {
+      "name": "Home.Evening-starts",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:11:19",
+      "lasttriggered": "2019-04-14T18:02:00",
+      "timestriggered": 5,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/1/state/daylight",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/sensors/1/state/daylight",
+          "operator": "dx"
+        },
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "eq",
+          "value": "1"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/sensors/15/state",
+          "method": "PUT",
+          "body": {
+            "status": 2
+          }
+        }
+      ]
+    },
+    "6": {
+      "name": "MotionSensor 7.off-gps",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-11T20:57:38",
+      "lasttriggered": "none",
+      "timestriggered": 0,
+      "status": "enabled",
+      "recycle": true,
+      "conditions": [
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/sensors/20/state/presence",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/sensors/20/state/presence",
+          "operator": "ddx",
+          "value": "PT00:30:00"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/sensors/15/state",
+          "method": "PUT",
+          "body": {
+            "0": {
+              "key": "status",
+              "value": 0
+            }
+          }
+        }
+      ]
+    },
+    "7": {
+      "name": "Hallway.Night",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:27:10",
+      "lasttriggered": "2019-04-13T22:37:54",
+      "timestriggered": 5,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "eq",
+          "value": "3"
+        },
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/4/action",
+          "method": "PUT",
+          "body": {
+            "on": true,
+            "bri": 1,
+            "ct": 454
+          }
+        }
+      ]
+    },
+    "8": {
+      "name": "Home.Day-on",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:29:51",
+      "lasttriggered": "none",
+      "timestriggered": 0,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "eq",
+          "value": "1"
+        },
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/1/action",
+          "method": "PUT",
+          "body": {
+            "on": true,
+            "bri": 255,
+            "ct": 345
+          }
+        },
+        {
+          "address": "/groups/2/action",
+          "method": "PUT",
+          "body": {
+            "on": true,
+            "bri": 255,
+            "ct": 345
+          }
+        },
+        {
+          "address": "/groups/3/action",
+          "method": "PUT",
+          "body": {
+            "on": true,
+            "bri": 256
+          }
+        }
+      ]
+    },
+    "9": {
+      "name": "Home.AutoOff",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:34:45",
+      "lasttriggered": "2019-04-14T17:23:41",
+      "timestriggered": 37,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "eq",
+          "value": "0"
+        },
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/0/action",
+          "method": "PUT",
+          "body": {
+            "on": false
+          }
+        }
+      ]
+    },
+    "10": {
+      "name": "Home.Evening-on",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:35:03",
+      "lasttriggered": "2019-04-14T18:02:01",
+      "timestriggered": 13,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "eq",
+          "value": "2"
+        },
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/0/action",
+          "method": "PUT",
+          "body": {
+            "on": true,
+            "bri": 255,
+            "ct": 454
+          }
+        }
+      ]
+    },
+    "11": {
+      "name": "Toilet.AutoDim",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:41:12",
+      "lasttriggered": "2019-04-13T22:47:31",
+      "timestriggered": 2,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "eq",
+          "value": "3"
+        },
+        {
+          "address": "/groups/6/state/any_on",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/groups/6/state/any_on",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/6/action",
+          "method": "PUT",
+          "body": {
+            "bri": 1
+          }
+        }
+      ]
+    },
+    "12": {
+      "name": "Toilet.AutoBri",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-14T20:42:01",
+      "lasttriggered": "2019-04-14T18:02:01",
+      "timestriggered": 63,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "lt",
+          "value": "3"
+        },
+        {
+          "address": "/groups/6/state/any_on",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/groups/6/state/any_on",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/6/action",
+          "method": "PUT",
+          "body": {
+            "bri": 150
+          }
+        }
+      ]
+    },
+    "14": {
+      "name": "MotionSensor 7.manualOff",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-03-07T20:38:16",
+      "lasttriggered": "2019-04-14T17:23:41",
+      "timestriggered": 46,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/groups/0/state/any_on",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/groups/0/state/any_on",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/sensors/15/state",
+          "method": "PUT",
+          "body": {
+            "status": 0
+          }
+        }
+      ]
+    },
+    "15": {
+      "name": "LivingWhites.AutoOff",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-03-07T20:55:04",
+      "lasttriggered": "none",
+      "timestriggered": 0,
+      "status": "disabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/groups/1/state/all_on",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/groups/1/state/all_on",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/2/action",
+          "method": "PUT",
+          "body": {
+            "on": false
+          }
+        },
+        {
+          "address": "/groups/3/action",
+          "method": "PUT",
+          "body": {
+            "on": false
+          }
+        }
+      ]
+    },
+    "16": {
+      "name": "HipsterLight.AlwaysDim",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-03-07T21:03:35",
+      "lasttriggered": "2019-04-14T17:41:26",
+      "timestriggered": 36,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/lights/7/state/on",
+          "operator": "dx"
+        },
+        {
+          "address": "/lights/7/state/on",
+          "operator": "eq",
+          "value": "true"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/lights/7/state",
+          "method": "PUT",
+          "body": {
+            "bri": 1
+          }
+        }
+      ]
+    },
+    "17": {
+      "name": "MotionSensor 7.off-timer",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-15T20:01:07",
+      "lasttriggered": "none",
+      "timestriggered": 0,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "ddx",
+          "value": "PT00:30:00"
+        },
+        {
+          "address": "/sensors/20/state/presence",
+          "operator": "eq",
+          "value": "false"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/sensors/15/state",
+          "method": "PUT",
+          "body": {
+            "status": 0
+          }
+        }
+      ]
+    },
+    "18": {
+      "name": "Home.SleepOff",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-15T20:09:26",
+      "lasttriggered": "2019-04-14T17:23:51",
+      "timestriggered": 37,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/groups/5/state/all_on",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/groups/5/state/all_on",
+          "operator": "ddx",
+          "value": "PT00:00:10"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/0/action",
+          "method": "PUT",
+          "body": {
+            "on": false
+          }
+        }
+      ]
+    },
+    "19": {
+      "name": "Toilet.AutoOff",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-15T20:13:59",
+      "lasttriggered": "2019-04-14T18:17:01",
+      "timestriggered": 30,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/groups/6/state/all_on",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/groups/6/state/all_on",
+          "operator": "ddx",
+          "value": "PT00:15:00"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/6/action",
+          "method": "PUT",
+          "body": {
+            "on": false,
+            "transitiontime": 30
+          }
+        }
+      ]
+    },
+    "20": {
+      "name": "Gang.AutoOff",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-25T21:30:53",
+      "lasttriggered": "2019-04-14T17:51:35",
+      "timestriggered": 4,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "false"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "ddx",
+          "value": "PT00:10:00"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/4/action",
+          "method": "PUT",
+          "body": {
+            "on": false,
+            "transitiontime": 20
+          }
+        }
+      ]
+    },
+    "21": {
+      "name": "Gang.NightOn",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-26T09:26:42",
+      "lasttriggered": "2019-04-13T22:48:50",
+      "timestriggered": 12,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "eq",
+          "value": "3"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/4/action",
+          "method": "PUT",
+          "body": {
+            "on": true,
+            "bri": 1
+          }
+        }
+      ]
+    },
+    "22": {
+      "name": "Gang.DayOn",
+      "owner": "BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe",
+      "created": "2018-08-26T09:28:16",
+      "lasttriggered": "2019-04-14T16:53:19",
+      "timestriggered": 148,
+      "status": "enabled",
+      "recycle": false,
+      "conditions": [
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "lt",
+          "value": "3"
+        },
+        {
+          "address": "/sensors/15/state/status",
+          "operator": "gt",
+          "value": "0"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "eq",
+          "value": "true"
+        },
+        {
+          "address": "/sensors/7/state/presence",
+          "operator": "dx"
+        }
+      ],
+      "actions": [
+        {
+          "address": "/groups/4/action",
+          "method": "PUT",
+          "body": {
+            "on": true,
+            "transitiontime": 10,
+            "bri": 200
+          }
+        }
+      ]
+    }
+  },
+  "sensors": {
+    "1": {
+      "state": {
+        "daylight": false,
+        "lastupdated": "2019-04-14T18:02:00"
+      },
+      "config": {
+        "on": true,
+        "configured": true,
+        "sunriseoffset": 30,
+        "sunsetoffset": -30
+      },
+      "name": "Daylight",
+      "type": "Daylight",
+      "modelid": "PHDL00",
+      "manufacturername": "Philips",
+      "swversion": "1.0"
+    },
+    "3": {
+      "state": {
+        "presence": true,
+        "lastupdated": "2019-04-08T17:21:10"
+      },
+      "config": {
+        "on": true,
+        "reachable": true
+      },
+      "name": "HomeAway",
+      "type": "CLIPPresence",
+      "modelid": "HOMEAWAY",
+      "manufacturername": "7651c2cd61cacf262aef66d04a337f5",
+      "swversion": "A_1",
+      "uniqueid": "L_01_XiqOP",
+      "recycle": false
+    },
+    "5": {
+      "state": {
+        "status": 0,
+        "lastupdated": "2019-04-04T05:33:00"
+      },
+      "config": {
+        "on": true,
+        "reachable": true
+      },
+      "name": "Light status",
+      "type": "CLIPGenericStatus",
+      "modelid": "Model 2015",
+      "manufacturername": "all 4 hue",
+      "swversion": "1.0",
+      "uniqueid": "PFHS-LIGHT-STATE",
+      "recycle": false
+    },
+    "6": {
+      "state": {
+        "temperature": 2294,
+        "lastupdated": "2019-04-14T18:51:21"
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2019-03-12T13:38:50"
+      },
+      "config": {
+        "on": true,
+        "battery": 100,
+        "reachable": true,
+        "alert": "none",
+        "ledindication": false,
+        "usertest": false,
+        "pending": []
+      },
+      "name": "Hue temperature sensor 1",
+      "type": "ZLLTemperature",
+      "modelid": "SML001",
+      "manufacturername": "Philips",
+      "productname": "Hue temperature sensor",
+      "swversion": "6.1.1.27575",
+      "uniqueid": "00:17:88:01:02:13:92:7a-02-0402",
+      "capabilities": {
+        "certified": true
+      }
+    },
+    "7": {
+      "state": {
+        "presence": false,
+        "lastupdated": "2019-04-14T17:41:35"
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2019-03-12T13:38:50"
+      },
+      "config": {
+        "on": true,
+        "battery": 100,
+        "reachable": true,
+        "alert": "none",
+        "ledindication": false,
+        "usertest": false,
+        "sensitivity": 2,
+        "sensitivitymax": 2,
+        "pending": []
+      },
+      "name": "Living sensor",
+      "type": "ZLLPresence",
+      "modelid": "SML001",
+      "manufacturername": "Philips",
+      "productname": "Hue motion sensor",
+      "swversion": "6.1.1.27575",
+      "uniqueid": "00:17:88:01:02:13:92:7a-02-0406",
+      "capabilities": {
+        "certified": true
+      }
+    },
+    "8": {
+      "state": {
+        "lightlevel": 10797,
+        "dark": true,
+        "daylight": false,
+        "lastupdated": "2019-04-14T18:51:32"
+      },
+      "swupdate": {
+        "state": "noupdates",
+        "lastinstall": "2019-03-12T13:38:50"
+      },
+      "config": {
+        "on": true,
+        "battery": 100,
+        "reachable": true,
+        "alert": "none",
+        "tholddark": 26812,
+        "tholdoffset": 7000,
+        "ledindication": false,
+        "usertest": false,
+        "pending": []
+      },
+      "name": "Hue ambient light sensor 1",
+      "type": "ZLLLightLevel",
+      "modelid": "SML001",
+      "manufacturername": "Philips",
+      "productname": "Hue ambient light sensor",
+      "swversion": "6.1.1.27575",
+      "uniqueid": "00:17:88:01:02:13:92:7a-02-0400",
+      "capabilities": {
+        "certified": true
+      }
+    },
+    "14": {
+      "state": {
+        "status": 0,
+        "lastupdated": "none"
+      },
+      "config": {
+        "on": true,
+        "reachable": true
+      },
+      "name": "presenceState",
+      "type": "CLIPGenericStatus",
+      "modelid": "HUELABSENUM",
+      "manufacturername": "Philips",
+      "swversion": "1.0",
+      "uniqueid": "3:12:6157-529d-4a3d-ad60",
+      "recycle": true
+    },
+    "15": {
+      "state": {
+        "status": 2,
+        "lastupdated": "2019-04-14T18:02:00"
+      },
+      "config": {
+        "on": true,
+        "reachable": true
+      },
+      "name": "MotionSensor 7.Companion",
+      "type": "CLIPGenericStatus",
+      "modelid": "PHA_STATE",
+      "manufacturername": "Philips",
+      "swversion": "1.0",
+      "uniqueid": "MotionSensor 7.Companion",
+      "recycle": true
+    },
+    "20": {
+      "state": {
+        "presence": true,
+        "lastupdated": "2019-04-14T14:16:18"
+      },
+      "config": {
+        "on": true,
+        "reachable": true
+      },
+      "name": "LENOVO Lenovo P2a42",
+      "type": "Geofence",
+      "modelid": "HA_GEOFENCE",
+      "manufacturername": "Philips",
+      "swversion": "A_1",
+      "uniqueid": "L_02_mkaDc",
+      "recycle": true
+    }
+  },
+  "resourcelinks": {
+    "43191": {
+      "name": "MotionSensor 7",
+      "description": "MotionSensor 7 behavior",
+      "type": "Link",
+      "classid": 10020,
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "links": [
+        "/sensors/7",
+        "/sensors/8",
+        "/sensors/15",
+        "/groups/1",
+        "/groups/2",
+        "/groups/3",
+        "/rules/1",
+        "/rules/3",
+        "/rules/6",
+        "/scenes/mjNZts9KoP8Hugf",
+        "/scenes/U0mCUafZe0CqzND",
+        "/scenes/AJVfcDUqewjEs8F",
+        "/scenes/zmGXnrhNAeYTA7b",
+        "/scenes/QeQ7t9Gj9vCFZmq",
+        "/scenes/vRkZ-jWIH-V9wg8",
+        "/scenes/eYFybNZepvo1TIF",
+        "/scenes/4acQ2dS0POoBL0m",
+        "/scenes/1JmYr9vGlR6ny-8"
+      ]
+    },
+    "38878": {
+      "name": "Do not disturb my scene",
+      "description": "ee38b36857f9a1ed8942e5ad89b1eb70:0:4c8f5d06d8ce5da15ca528c24965",
+      "type": "Link",
+      "classid": 2,
+      "owner": "aafdfda1-5f54-48fa-bc48-4c2f0f6e4305",
+      "recycle": true,
+      "links": [
+        "/sensors/14"
+      ]
+    },
+    "31624": {
+      "name": "HueLabs 2.0",
+      "description": "All installed formulas",
+      "type": "Link",
+      "classid": 1,
+      "owner": "65aa7c4a-31fe-407d-946d-4ce661d70cda",
+      "recycle": false,
+      "links": [
+        "/resourcelinks/38878"
+      ]
+    },
+    "205": {
+      "name": "Home and Away 3",
+      "description": "Home and Away 3 behavior",
+      "type": "Link",
+      "classid": 20010,
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "links": [
+        "/sensors/3",
+        "/sensors/1",
+        "/groups/0",
+        "/scenes/yEaDEZOb1Tj1fod"
+      ]
+    },
+    "65033": {
+      "name": "Geofence 16",
+      "description": "Geofence 16 behavior",
+      "type": "Link",
+      "classid": 20020,
+      "owner": "3d719133-0477-43ba-90df-2e382e90b050",
+      "recycle": false,
+      "links": []
+    },
+    "50979": {
+      "name": "Geofence 20",
+      "description": "Geofence 20 behavior",
+      "type": "Link",
+      "classid": 20020,
+      "owner": "9bcad7f5-3b22-49ea-a6c3-915246e7cc68",
+      "recycle": false,
+      "links": [
+        "/sensors/20"
+      ]
+    }
+  }
+}
