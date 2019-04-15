@@ -1,7 +1,7 @@
 import {Injectable, Type} from '@angular/core';
 import {Observable, ReplaySubject} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {map} from 'rxjs/operators';
+import {map, timeout} from 'rxjs/operators';
 import {Types} from './types.model';
 import {IPayload} from '../rules/rule';
 import {ApiModel} from './api.model';
@@ -18,17 +18,30 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
+  public get apiData$(): Observable<ApiModel> {
+    return this.apiData.asObservable();
+  }
+
   public refresh(): void {
     this.initialized = true;
-    this.http.get<ApiModel>(this.hue).subscribe(body => {
-      if (body && body[0] && body[0].error) {
-        this.hue = this.dummy;
-        this.http.get<ApiModel>(this.dummy).subscribe(dummy => {
-          this.apiData.next(dummy);
-        });
-      } else {
-        this.apiData.next(body);
-      }
+    this.http.get<ApiModel>(this.hue)
+      .pipe(
+        timeout(1000)
+      )
+      .subscribe(body => {
+        if (body && body[0] && body[0].error) {
+          this.loadDummy();
+        } else {
+          this.apiData.next(body);
+        }
+      },
+      () => this.loadDummy());
+  }
+
+  private loadDummy() {
+    this.hue = this.dummy;
+    this.http.get<ApiModel>(this.dummy).subscribe(dummy => {
+      this.apiData.next(dummy);
     });
   }
 

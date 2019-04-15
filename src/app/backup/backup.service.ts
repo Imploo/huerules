@@ -1,26 +1,29 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {ApiService} from '../api/api.service';
+import {take} from 'rxjs/operators';
+import {ApiModel} from '../api/api.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackupService {
 
-  constructor(private http: HttpClient) { }
-
-  performBackup() {
-    this.backupType('groups');
-    this.backupType('lights');
-    this.backupType('sensors');
-    this.backupType('rules');
+  constructor(private http: HttpClient, private apiService: ApiService) {
   }
 
-  private backupType(type: string) {
-    this.http.get<any>(`http://192.168.178.22/api/BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe/${type}`).subscribe(response => {
-      window.localStorage[`huerules_${type}`] = JSON.stringify(response);
-      this.downloadFile(response, `${type}.json`);
+  performBackup() {
+    this.apiService.apiData$
+      .pipe(
+        take(1)
+      )
+      .subscribe(data => this.createFile(data));
+  }
 
-    });
+  private createFile(data: ApiModel) {
+    const json = JSON.stringify(data);
+    const now = Date.now().toString();
+    this.downloadFile(json, `huebackup-${now}.json`);
   }
 
   private downloadFile(data: any, filename: string) {

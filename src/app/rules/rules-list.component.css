@@ -33,10 +33,6 @@ select.form-control,
     padding: 0;
 }
 
-button {
-    background-color: #444;
-}
-
 .error {
     background-color: darkred;
     position:fixed;
