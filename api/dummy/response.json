@@ -1,0 +1,1 @@
+[{"success":{"/rules/3/name":"Living.OnAtDay"}},{"success":{"/rules/3/conditions":[{"address":"/sensors/14/state/status","operator":"eq","value":"3"},{"address":"/sensors/1/state/daylight","operator":"eq","value":"true"}]}},{"success":{"/rules/3/actions":[{"address":"/groups/1/action","method":"PUT","body":{         "scene": "4y9LKzGKTBWrhre"       }}]}}]

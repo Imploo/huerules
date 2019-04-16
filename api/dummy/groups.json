@@ -1,0 +1,136 @@
+{
+  "1": {
+    "name": "Living colors",
+    "lights": [
+      "10",
+      "9",
+      "1",
+      "2"
+    ],
+    "type": "Room",
+    "state": {
+      "all_on": true,
+      "any_on": true
+    },
+    "recycle": false,
+    "class": "Living room",
+    "action": {
+      "on": true,
+      "bri": 254,
+      "hue": 13401,
+      "sat": 204,
+      "effect": "none",
+      "xy": [
+        0.5052,
+        0.4152
+      ],
+      "ct": 454,
+      "alert": "none",
+      "colormode": "ct"
+    }
+  },
+  "2": {
+    "name": "Living whites",
+    "lights": [
+      "7",
+      "4"
+    ],
+    "type": "Room",
+    "state": {
+      "all_on": true,
+      "any_on": true
+    },
+    "recycle": false,
+    "class": "Living room",
+    "action": {
+      "on": true,
+      "bri": 254,
+      "ct": 454,
+      "alert": "none",
+      "colormode": "ct"
+    }
+  },
+  "3": {
+    "name": "Only dimmables",
+    "lights": [
+      "8"
+    ],
+    "type": "Room",
+    "state": {
+      "all_on": true,
+      "any_on": true
+    },
+    "recycle": false,
+    "class": "Living room",
+    "action": {
+      "on": true,
+      "bri": 254,
+      "alert": "none"
+    }
+  },
+  "4": {
+    "name": "Gang",
+    "lights": [
+      "12",
+      "13"
+    ],
+    "type": "Room",
+    "state": {
+      "all_on": true,
+      "any_on": true
+    },
+    "recycle": false,
+    "class": "Living room",
+    "action": {
+      "on": true,
+      "bri": 254,
+      "alert": "none"
+    }
+  },
+  "5": {
+    "name": "Sleeping room",
+    "lights": [
+      "3",
+      "14"
+    ],
+    "type": "Room",
+    "state": {
+      "all_on": true,
+      "any_on": true
+    },
+    "recycle": false,
+    "class": "Living room",
+    "action": {
+      "on": true,
+      "bri": 253,
+      "hue": 13401,
+      "sat": 204,
+      "effect": "none",
+      "xy": [
+        0.5052,
+        0.4152
+      ],
+      "ct": 454,
+      "alert": "none",
+      "colormode": "ct"
+    }
+  },
+  "6": {
+    "name": "Toilet",
+    "lights": [
+      "15"
+    ],
+    "type": "Room",
+    "state": {
+      "all_on": true,
+      "any_on": true
+    },
+    "recycle": false,
+    "class": "Bathroom",
+    "action": {
+      "on": true,
+      "bri": 254,
+      "alert": "select"
+    }
+  }
+}
