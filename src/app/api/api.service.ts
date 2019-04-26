@@ -19,6 +19,9 @@ export class ApiService {
   }
 
   public get apiData$(): Observable<ApiModel> {
+    if (!this.initialized) {
+      this.refresh();
+    }
     return this.apiData.asObservable();
   }
 

@@ -5,71 +5,76 @@
 </div>
 <div *ngIf="dummyActive">Dummy values are active!</div>
 <div class='container-fluid'>
-    <div class='row' *ngFor='let rule of rules'>
-        <div class='col-xs-1'>
-            <div class='row'>
-                <div class='col'>{{rule.id}}</div>
-                <div class='col'>
-                    <label><input #status type="checkbox" 
-                        [checked]='rule.status == "enabled"' 
+  <div class='row' *ngFor='let rule of rules'>
+    <div class='col-xs-1'>
+      <div class='row'>
+        <div class='col'>{{rule.id}}</div>
+        <div class='col'>
+          <label><input #status type="checkbox"
+                        [checked]='rule.status == "enabled"'
                         (change)='rule.status = status.checked ? "enabled" : "disabled"'/>Active</label>
-                </div>
-            </div>
-            <div class='row'>
-                <button (click)='save(rule)' type="button" class='btn btn-dark'>Save</button>
-            </div>
         </div>
-        <div class='col-xs-2 input-group-xs'>
-            <textarea [(ngModel)]="rule.name" class="form-control input-xs" ></textarea>
-        </div>
-        <div class='col-xs-4'>
-            <div class='row' *ngFor='let condition of rule.conditions'>
-                <div class='col-xs-12'>
-                    <div class='row'>
-                      <app-state [(address)]="condition.address"></app-state>
-                        <div class='col-xs-1 input-group-xs'>
-                            <button (click)='removeCondition(rule, condition)' type='button' class='btn btn-dark btn-block'>x</button>
-                        </div>
-                    </div>
-                    <div class='row'>
-                        <div class='col-xs-12 input-group-xs'>
-                            <select class='input-xs form-control' [(ngModel)]='condition.operator'>
-                                <option *ngFor="let o of operators" [value]="o">{{o}}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class='row' *ngIf='condition.operator != "dx"'>
-                        <div class='col-xs-12 input-group-xs'>
-                            <input type='text' [(ngModel)]='condition.value' class='form-control input-xs' />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class='row'>
-                <div class='col-xs-12'>
-                    <button (click)='newCondition(rule)' type='button' class='btn btn-dark'>Add</button>
-                </div>
-            </div>
-        </div>
-        <div class='col-xs-4'>
-            <div class='row' >
-              <app-action
-                 *ngFor='let action of rule.actions'
-                 [action]="action"
-                 [rule]="rule">
-              </app-action>
-            </div>
-            <div class='row'>
-                <div class='col-xs-12'>
-                    <button (click)='newAction(rule)' type='button' class='btn btn-dark'>Add</button>
-                </div>
-            </div>
-        </div>
-        <div class='col-xs-1'>
-            <button (click)='removeRule(rule)' type='button' class='btn btn-dark'>x</button>
-        </div>
+      </div>
+      <div class='row'>
+        <button (click)='save(rule)' class='btn btn-dark'>Save</button>
+      </div>
     </div>
-    <div class='row'>
-        <button (click)='newRule()' type='button' class='btn btn-dark'>Add new rule</button>        
+    <div class='col-xs-2 input-group-xs'>
+      <div class="row">
+        {{ rule.lasttriggered }}
+      </div>
+      <div class="row">
+        <textarea [(ngModel)]="rule.name" class="form-control input-xs"></textarea>
+      </div>
     </div>
+    <div class='col-xs-4'>
+      <div class='row' *ngFor='let condition of rule.conditions'>
+        <div class='col-xs-12'>
+          <div class='row'>
+            <app-state [(address)]="condition.address"></app-state>
+            <div class='col-xs-1 input-group-xs'>
+              <button (click)='removeCondition(rule, condition)' type='button' class='btn btn-dark btn-block'>x</button>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-xs-12 input-group-xs'>
+              <select class='input-xs form-control' [(ngModel)]='condition.operator'>
+                <option *ngFor="let o of operators" [value]="o">{{o}}</option>
+              </select>
+            </div>
+          </div>
+          <div class='row' *ngIf='condition.operator != "dx"'>
+            <div class='col-xs-12 input-group-xs'>
+              <input type='text' [(ngModel)]='condition.value' class='form-control input-xs'/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-xs-12'>
+          <button (click)='newCondition(rule)' type='button' class='btn btn-dark'>Add</button>
+        </div>
+      </div>
+    </div>
+    <div class='col-xs-4'>
+      <div class='row'>
+        <app-action
+          *ngFor='let action of rule.actions'
+          [action]="action"
+          [rule]="rule">
+        </app-action>
+      </div>
+      <div class='row'>
+        <div class='col-xs-12'>
+          <button (click)='newAction(rule)' type='button' class='btn btn-dark'>Add</button>
+        </div>
+      </div>
+    </div>
+    <div class='col-xs-1'>
+      <button (click)='removeRule(rule)' type='button' class='btn btn-dark'>x</button>
+    </div>
+  </div>
+  <div class='row'>
+    <button (click)='newRule()' type='button' class='btn btn-dark'>Add new rule</button>
+  </div>
 </div>

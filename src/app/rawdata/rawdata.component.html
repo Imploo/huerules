@@ -1,0 +1,8 @@
+<button class="btn btn-dark"
+        (click)="apiService.refresh()">
+  Refresh data
+</button>
+<pre class="pre-dark"
+     *ngIf="apiService.apiData$ | async as data"
+     [innerHTML]="data | prettyjson: 2">
+</pre>

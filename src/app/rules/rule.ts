@@ -4,6 +4,7 @@ export interface IRule {
     conditions: ICondition[];
     actions: IAction[];
     status: string;
+    lasttriggered: string;
 }
 
 export interface IAction {

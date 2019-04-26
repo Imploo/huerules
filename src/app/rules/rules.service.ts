@@ -49,7 +49,7 @@ export class RulesService {
   private mapToPayload(rule: IRule): IPayload {
     const data = <IPayload>{};
     data.name = rule.name;
-    data.actions = this.convertToPayloadAction(rule.actions);
+    data.actions = rule.actions && rule.actions.length > 0 ? this.convertToPayloadAction(rule.actions) : [];
     data.conditions = rule.conditions;
     data.status = rule.status;
     console.log(JSON.stringify(data));
