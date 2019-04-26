@@ -1,41 +1,28 @@
-<div class='col-xs-12'>
-  <div class='row'>
-    <div class='col-xs-11 input-group'>
-      <ng-select class="col dark"
-                 [items]="entities"
-                 bindLabel="name"
-                 [(ngModel)]="selectedEntity"
-                 groupBy="type"
-                 placeholder="Select an entity"
-                 (change)="handleChange()"
-                 [clearable]="false">
-      </ng-select>
-    </div>
-    <div class='col-xs-1 input-group-xs'>
-      <button (click)='removeAction(rule, action)' type='button' class='btn btn-dark btn-block'>x</button>
-    </div>
-  </div>
-  <div class='row indent-1' *ngFor='let body of action.body'>
-    <div class='col-xs-5 input-group'>
-      <ng-select class="col dark"
-                 *ngIf="selectedEntity"
-                 [items]="selectedEntity.properties"
-                 [(ngModel)]="body.key"
-                 placeholder="Select an action"
-                 [addTag]="true"
-                 [clearable]="false">
-      </ng-select>
-    </div>
-    <div class='col-xs-5 input-group'>
-      <input type='text' [(ngModel)]='body.value' class='form-control input-xs' />
-    </div>
-    <div class='col-xs-1 input-group-xs'>
-      <button (click)='removeBody(action, body)' type='button' class='btn btn-dark btn-block'>x</button>
-    </div>
-  </div>
-  <div class='row indent-1'>
-    <div class='col-xs-12'>
-      <button (click)='newBodyEntry(action)' type='button' class='btn btn-dark'>Add</button>
-    </div>
-  </div>
+<ng-select class="col dark"
+           [items]="entities"
+           bindLabel="name"
+           [(ngModel)]="selectedEntity"
+           groupBy="type"
+           placeholder="Select an entity"
+           (change)="handleChange()"
+           [clearable]="false">
+</ng-select>
+<div class="body_container" *ngFor='let body of action.body'>
+  <ng-select class="col dark"
+             *ngIf="selectedEntity"
+             [items]="selectedEntity.properties"
+             [(ngModel)]="body.key"
+             placeholder="Select an action"
+             [addTag]="true"
+             [clearable]="false">
+  </ng-select>
+  <input type='text' [(ngModel)]='body.value'/>
+  <button (click)='removeBody(action, body)' mat-icon-button class='btn btn-dark'>
+    <mat-icon>remove_circle</mat-icon>
+  </button>
 </div>
+<button (click)='newBodyEntry(action)'
+        mat-ripple
+        class='btn btn-dark new-body'>
+  <mat-icon>add</mat-icon>
+</button>

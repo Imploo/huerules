@@ -1,2 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@ng-select/ng-select/themes/default.theme.css";
+
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $headline: mat-typography-level(16px, 32px, 600),
+  $body-1: mat-typography-level(12px, 16px, 400)
+);
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($custom-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent:  mat-palette($mat-amber, 600, 400, 800);
+
+// The warn palette is optional (defaults to red).
+$dark-warn:    mat-palette($mat-deep-orange);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$cdark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+// Create your Sass color vars (will be available in all the project)
+$primary: mat-color($dark-primary);
+$accent: mat-color($dark-accent);
+$warn: mat-color($dark-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($cdark-theme);
+
+.btn.btn-primary {
+  background-color: $accent;
+  color: #333;
+  border: none;
+}
+
+.btn.mat-icon-button:not(.btn-secondary) {
+  color: $accent;
+}
+
+.mat-card-actions .btn.mat-button {
+  margin-right: 0.5rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

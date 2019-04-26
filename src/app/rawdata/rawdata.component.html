@@ -1,8 +1,8 @@
-<button class="btn btn-dark"
+<button class="btn btn-dark btn-fab"
+        mat-fab
         (click)="apiService.refresh()">
-  Refresh data
+  <mat-icon>refresh</mat-icon>
 </button>
-<pre class="pre-dark"
-     *ngIf="apiService.apiData$ | async as data"
-     [innerHTML]="data | prettyjson: 2">
-</pre>
+<app-jsonviewer *ngIf="apiService.apiData$ | async as data"
+                [data]="data"
+></app-jsonviewer>

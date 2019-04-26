@@ -11,6 +11,7 @@ import {ApiModel} from './api.model';
 })
 export class ApiService {
   private apiData: ReplaySubject<ApiModel> = new ReplaySubject<ApiModel>();
+  private dummyActive: ReplaySubject<boolean> = new ReplaySubject<boolean>();
   private hue = 'http://192.168.2.4/api/BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe/';
   private dummy = 'api/dummy/dummy.json';
   private initialized = false;
@@ -23,6 +24,10 @@ export class ApiService {
       this.refresh();
     }
     return this.apiData.asObservable();
+  }
+
+  public get dummyActive$(): Observable<boolean> {
+    return this.dummyActive.asObservable();
   }
 
   public refresh(): void {
@@ -43,6 +48,7 @@ export class ApiService {
 
   private loadDummy() {
     this.hue = this.dummy;
+    this.dummyActive.next(true);
     this.http.get<ApiModel>(this.dummy).subscribe(dummy => {
       this.apiData.next(dummy);
     });

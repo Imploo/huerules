@@ -7,6 +7,11 @@ export function createAppRoutes(): Routes {
   return [
     {
       path: '',
+      redirectTo: '/rules',
+      pathMatch: 'full'
+    },
+    {
+      path: 'rules',
       component: RulesListComponent
     },
     {

@@ -4,15 +4,10 @@ import {ApiService} from '../api/api.service';
 @Component({
   selector: 'app-rawdata',
   templateUrl: './rawdata.component.html',
-  styleUrls: ['./rawdata.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./rawdata.component.scss']
 })
 export class RawDataComponent {
 
   constructor(public apiService: ApiService) { }
-
-  public getJson(data: any): string {
-    return JSON.stringify(data);
-  }
 
 }

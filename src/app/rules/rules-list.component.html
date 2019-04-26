@@ -1,80 +1,93 @@
-<div *ngIf='errorMessage'
-     [innerHTML]="errorMessage"
-     class='error'
-     (click)='errorMessage = ""'>
+<div class="message error"
+     *ngIf="apiService.dummyActive$ | async">Dummy values are active!
 </div>
-<div *ngIf="dummyActive">Dummy values are active!</div>
-<div class='container-fluid'>
-  <div class='row' *ngFor='let rule of rules'>
-    <div class='col-xs-1'>
-      <div class='row'>
-        <div class='col'>{{rule.id}}</div>
-        <div class='col'>
-          <label><input #status type="checkbox"
-                        [checked]='rule.status == "enabled"'
-                        (change)='rule.status = status.checked ? "enabled" : "disabled"'/>Active</label>
-        </div>
-      </div>
-      <div class='row'>
-        <button (click)='save(rule)' class='btn btn-dark'>Save</button>
-      </div>
-    </div>
-    <div class='col-xs-2 input-group-xs'>
-      <div class="row">
-        {{ rule.lasttriggered }}
-      </div>
-      <div class="row">
-        <textarea [(ngModel)]="rule.name" class="form-control input-xs"></textarea>
-      </div>
-    </div>
-    <div class='col-xs-4'>
-      <div class='row' *ngFor='let condition of rule.conditions'>
-        <div class='col-xs-12'>
-          <div class='row'>
-            <app-state [(address)]="condition.address"></app-state>
-            <div class='col-xs-1 input-group-xs'>
-              <button (click)='removeCondition(rule, condition)' type='button' class='btn btn-dark btn-block'>x</button>
-            </div>
-          </div>
-          <div class='row'>
-            <div class='col-xs-12 input-group-xs'>
-              <select class='input-xs form-control' [(ngModel)]='condition.operator'>
-                <option *ngFor="let o of operators" [value]="o">{{o}}</option>
-              </select>
-            </div>
-          </div>
-          <div class='row' *ngIf='condition.operator != "dx"'>
-            <div class='col-xs-12 input-group-xs'>
-              <input type='text' [(ngModel)]='condition.value' class='form-control input-xs'/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-xs-12'>
-          <button (click)='newCondition(rule)' type='button' class='btn btn-dark'>Add</button>
-        </div>
-      </div>
-    </div>
-    <div class='col-xs-4'>
-      <div class='row'>
-        <app-action
-          *ngFor='let action of rule.actions'
-          [action]="action"
-          [rule]="rule">
-        </app-action>
-      </div>
-      <div class='row'>
-        <div class='col-xs-12'>
-          <button (click)='newAction(rule)' type='button' class='btn btn-dark'>Add</button>
-        </div>
-      </div>
-    </div>
-    <div class='col-xs-1'>
-      <button (click)='removeRule(rule)' type='button' class='btn btn-dark'>x</button>
-    </div>
+<div class="sidenav">
+  <div class="sidenav__nav">
+    <button (click)='newRule()'
+            class='btn-fab'
+            mat-fab>
+      <mat-icon>add</mat-icon>
+    </button>
+    <mat-card *ngFor='let rule of rules'
+              mat-ripple
+              (click)="setActiveRule(rule)">
+      <mat-card-title>{{ rule.name }}</mat-card-title>
+      <mat-card-subtitle>{{ rule.lasttriggered | safeDate }}</mat-card-subtitle>
+    </mat-card>
   </div>
-  <div class='row'>
-    <button (click)='newRule()' type='button' class='btn btn-dark'>Add new rule</button>
+  <div class="sidenav__content">
+    <mat-expansion-panel *ngIf='message'
+                         class='message'
+                         [class.error]="hasError()">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Messages returned from Hue
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-jsonviewer [data]="message"
+                      (click)='message = null'>
+      </app-jsonviewer>
+    </mat-expansion-panel>
+    <ng-container *ngIf="rule">
+      <mat-card class="rule-card">
+        <mat-card-title>
+          <mat-slide-toggle [checked]="rule.status === 'enabled'" (change)="setStatus($event, rule)"></mat-slide-toggle>
+          <mat-form-field>
+            <input type="text" matInput [(ngModel)]="rule.name"/>
+          </mat-form-field>
+        </mat-card-title>
+        <mat-card-content>
+          <div class="rule-card__content">
+            <div class="rule-card__content__column">
+              <mat-card class="mat-elevation-z3" *ngFor='let condition of rule.conditions'>
+                <mat-card-content>
+                  <div class="rule-card__content__column">
+                    <app-state [(address)]="condition.address"></app-state>
+                    <ng-select class="dark"
+                               [items]="operators"
+                               [(ngModel)]='condition.operator'
+                               [clearable]="false">
+                    </ng-select>
+                    <input type='text' [(ngModel)]='condition.value' class='form-control input-xs'/>
+                  </div>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button (click)='removeCondition(rule, condition)' mat-icon-button class='btn btn-dark'>
+                    <mat-icon>remove_circle</mat-icon>
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+              <mat-card class="add" mat-ripple (click)="newCondition(rule)">
+                <mat-icon>add</mat-icon>
+              </mat-card>
+            </div>
+            <div class="rule-card__content__column">
+              <mat-card class="mat-elevation-z3" *ngFor='let action of rule.actions'>
+                <mat-card-content>
+                  <app-action
+                    [action]="action"
+                    [rule]="rule">
+                  </app-action>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button (click)='removeAction(rule, action)' mat-icon-button class='btn btn-dark'>
+                    <mat-icon>remove_circle</mat-icon>
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+              <mat-card class="add" mat-ripple (click)="newAction(rule)">
+                <mat-icon>add</mat-icon>
+              </mat-card>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)='removeRule(rule)' mat-button class='btn btn-dark btn-secondary'>
+            Remove rule
+          </button>
+          <button (click)='save(rule)' mat-button class='btn btn-dark btn-primary'>Save rule</button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
   </div>
 </div>

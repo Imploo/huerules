@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { RulesListComponent } from './rules/rules-list.component';
@@ -14,6 +14,18 @@ import {createAppRoutes} from './app.routing';
 import {PrettyJsonModule} from 'angular2-prettyjson';
 import { MenuComponent } from './menu/menu.component';
 import {RawDataComponent} from './rawdata/rawdata.component';
+import { JsonviewerComponent } from './jsonviewer/jsonviewer.component';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatExpansionModule, MatFormFieldModule, MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatRippleModule,
+  MatSidenavModule, MatSlideToggleModule
+} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SafeDatePipe} from './safe-date/safe-date.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +36,9 @@ import {RawDataComponent} from './rawdata/rawdata.component';
     BackupComponent,
     SensorsComponent,
     MenuComponent,
-    RawDataComponent
+    RawDataComponent,
+    JsonviewerComponent,
+    SafeDatePipe
   ],
   imports: [
     BrowserModule,
@@ -32,9 +46,22 @@ import {RawDataComponent} from './rawdata/rawdata.component';
     HttpClientModule,
     NgSelectModule,
     RouterModule.forRoot(createAppRoutes()),
-    PrettyJsonModule
+    PrettyJsonModule,
+    MatExpansionModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatRippleModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSlideToggleModule,
+    MatGridListModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'en_NL' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,20 +1,39 @@
+@import '../../styles';
+
 .menu {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 2rem;
+  align-items: stretch;
   position: sticky;
-  background-color: #333;
+  background-color: #3a3a3a;
   width: 100%;
   z-index: 5;
   top: 0;
+  height: 3rem;
 }
 
 .menu > a {
-  margin: 0 3rem;
-  font-size: 2rem;
+  padding: 0 3rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
+
+  &.active {
+    border-bottom: 2px solid $accent;
+  }
+
+  &:hover:not(.active) {
+    border-bottom: 2px solid $primary;
+  }
+
+  &,
+  &:active,
+  &:visited {
+    color: $primary;
+    text-decoration: none;
+  }
 }
 
 .menu .right {
   margin-left: auto;
+  margin-right: 1rem
 }

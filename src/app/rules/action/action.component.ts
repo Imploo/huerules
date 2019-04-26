@@ -45,11 +45,4 @@ export class ActionComponent implements OnInit {
     }
     action.body.push(<IBody>{});
   }
-
-  removeAction(rule: IRule, action: IAction): void {
-    const index: number = rule.actions.findIndex(x => x.address === action.address);
-    if (index > -1) {
-      rule.actions.splice(index, 1);
-    }
-  }
 }
