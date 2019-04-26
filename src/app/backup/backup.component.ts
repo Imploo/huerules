@@ -4,7 +4,7 @@ import {BackupService} from './backup.service';
 @Component({
   selector: 'app-backup',
   templateUrl: './backup.component.html',
-  styleUrls: ['./backup.component.css']
+  styleUrls: ['./backup.component.scss']
 })
 export class BackupComponent {
 

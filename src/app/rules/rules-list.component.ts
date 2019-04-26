@@ -8,7 +8,7 @@ import {ApiService} from '../api/api.service';
   moduleId: module.id,
   selector: 'app-rules-list',
   templateUrl: 'rules-list.component.html',
-  styleUrls: ['rules-list.component.css'],
+  styleUrls: ['rules-list.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class RulesListComponent implements OnInit {

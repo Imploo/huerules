@@ -6,7 +6,7 @@ import {ActionService} from './action.service';
 @Component({
   selector: 'app-action',
   templateUrl: './action.component.html',
-  styleUrls: ['./action.component.css']
+  styleUrls: ['./action.component.scss']
 })
 export class ActionComponent implements OnInit {
   @Input() action: IAction;

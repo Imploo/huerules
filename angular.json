@@ -24,7 +24,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/scss/bootstrap.min.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -36,7 +36,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractscss": true,
+              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -81,7 +81,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/scss/bootstrap.min.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "assets": [
               "src/assets",

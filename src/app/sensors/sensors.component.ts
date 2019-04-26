@@ -4,7 +4,7 @@ import {ApiService} from '../api/api.service';
 @Component({
   selector: 'app-sensors',
   templateUrl: './sensors.component.html',
-  styleUrls: ['./sensors.component.css'],
+  styleUrls: ['./sensors.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class SensorsComponent {

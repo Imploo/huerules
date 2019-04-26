@@ -4,7 +4,7 @@ import {ApiService} from '../api/api.service';
 @Component({
   selector: 'app-rawdata',
   templateUrl: './rawdata.component.html',
-  styleUrls: ['./rawdata.component.css'],
+  styleUrls: ['./rawdata.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class RawDataComponent {
