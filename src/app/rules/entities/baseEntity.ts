@@ -1,6 +1,7 @@
 import {Types} from '../../api/types.model';
+import {DeepCopyHelper} from '../../deep-copy-helper';
 
-export abstract class BaseEntity {
+export abstract class BaseEntity<T> {
   constructor(
     public name: string,
     public id: number,
@@ -10,4 +11,7 @@ export abstract class BaseEntity {
   ) { }
 
   public abstract getAddress(): string;
+  public clone(): BaseEntity<T> {
+    return DeepCopyHelper.copy(this);
+  }
 }

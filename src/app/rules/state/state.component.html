@@ -1,10 +1,10 @@
 <ng-select class="dark"
            [items]="entities"
            bindLabel="name"
-           [(ngModel)]="selectedEntity"
+           [ngModel]="selectedEntity"
            groupBy="type"
            placeholder="Select an entity"
-           (change)="handleChange()"
+           (change)="handleChange($event)"
            [clearable]="false">
 </ng-select>
 <ng-select class="dark"

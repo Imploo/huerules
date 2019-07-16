@@ -2,7 +2,7 @@
      *ngIf="apiService.dummyActive$ | async">Dummy values are active!
 </div>
 <div class="sidenav">
-  <div class="sidenav__nav">
+  <div class="sidenav__nav scrollable">
     <button (click)='newRule()'
             class='btn-fab'
             mat-fab>
@@ -15,7 +15,7 @@
       <mat-card-subtitle>{{ rule.lasttriggered | safeDate }}</mat-card-subtitle>
     </mat-card>
   </div>
-  <div class="sidenav__content">
+  <div class="sidenav__content scrollable">
     <mat-expansion-panel *ngIf='message'
                          class='message'
                          [class.error]="hasError()">

@@ -1,15 +1,21 @@
 @import "../../styles";
 
 .message {
-  position: sticky;
+  position: fixed;
   top: 3rem;
   z-index: 100;
   background-color: #484;
-  width: 100%;
+  width: 75%;
 
   &.error {
     background-color: darkred;
   }
+}
+
+.scrollable {
+  position: fixed;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .sidenav {
@@ -34,7 +40,10 @@
   }
 
   &__content {
-    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 255px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,4 +108,8 @@
       background-color: #444;
     }
   }
+}
+
+button.mat-fab.btn-fab {
+  left: 10rem;
 }

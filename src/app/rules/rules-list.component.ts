@@ -26,7 +26,7 @@ export class RulesListComponent implements OnInit {
     this._rulesService.getRules()
       .subscribe(rules => {
         this.rules = this._rulesService.parseRules(rules);
-        if (this.rules && this.rules.length > 0) {
+        if (!this.rule && this.rules && this.rules.length > 0) {
           this.rule = this.rules[0];
         }
       });

@@ -6,7 +6,7 @@ import {ApiService} from '../../api/api.service';
 import {Types} from '../../api/types.model';
 
 @Injectable()
-export abstract class EntityService<TEntity extends BaseEntity> {
+export abstract class EntityService<TEntity extends BaseEntity<TEntity>> {
   private entitiesSubject: ReplaySubject<TEntity[]> = new ReplaySubject<TEntity[]>(4);
   public entities = this.entitiesSubject.asObservable();
 

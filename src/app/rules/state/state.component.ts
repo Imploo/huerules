@@ -15,7 +15,10 @@ export class StateComponent implements OnInit {
   public selectedEntity: StateEntity;
   constructor(private stateService: StateService) {}
 
-  public handleChange() {
+  public handleChange(entity?: StateEntity) {
+    if (entity && (!this.selectedEntity || this.selectedEntity !== entity)) {
+      this.selectedEntity = entity.clone();
+    }
     if (this.selectedEntity && this.selectedEntity.selectedProperty) {
       if (this.selectedEntity) {
         this.address = this.selectedEntity.getAddress();
