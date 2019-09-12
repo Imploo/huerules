@@ -1,5 +1,5 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import {ApiService} from '../api/api.service';
+import {Component} from '@angular/core';
+import {HueService} from '../hue/hue.service';
 
 @Component({
   selector: 'app-rawdata',
@@ -8,6 +8,6 @@ import {ApiService} from '../api/api.service';
 })
 export class RawDataComponent {
 
-  constructor(public apiService: ApiService) { }
+  constructor(public hueService: HueService) { }
 
 }

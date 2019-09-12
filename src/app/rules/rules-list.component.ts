@@ -15,9 +15,11 @@ import {MatSlideToggleChange} from '@angular/material';
 export class RulesListComponent implements OnInit {
 
   rules: IRule[];
-  rule: IRule;
+  activeRule: IRule;
   message: ResponseModel[];
   operators: string[] = ['eq', 'lt', 'gt', 'dx', 'ddx', 'in'];
+  private shouldKeepMessageOpen = false;
+  public search: string;
 
   constructor(private _rulesService: RulesService, public apiService: ApiService) {
   }
@@ -26,8 +28,8 @@ export class RulesListComponent implements OnInit {
     this._rulesService.getRules()
       .subscribe(rules => {
         this.rules = this._rulesService.parseRules(rules);
-        if (!this.rule && this.rules && this.rules.length > 0) {
-          this.rule = this.rules[0];
+        if (!this.activeRule && this.rules && this.rules.length > 0) {
+          this.activeRule = this.rules[0];
         }
       });
   }
@@ -35,12 +37,8 @@ export class RulesListComponent implements OnInit {
   save(rule: IRule): void {
     this._rulesService.save(rule)
       .subscribe(
-        ok => {
-          this.message = ok;
-          if (!this.hasError()) {
-            this.apiService.refresh();
-          }
-        }, (error) => this.message = error);
+        ok => this.processResponse(ok),
+        (error) => this.message = error);
   }
 
   newCondition(rule: IRule): void {
@@ -59,7 +57,7 @@ export class RulesListComponent implements OnInit {
   }
 
   newRule(): void {
-    this.rule = <IRule>{};
+    this.activeRule = <IRule>{};
   }
 
   removeRule(rule: IRule): void {
@@ -69,12 +67,8 @@ export class RulesListComponent implements OnInit {
     if (rule.id) {
       this._rulesService.delete(rule.id)
         .subscribe(
-          ok => {
-            this.message = ok;
-            if (!this.hasError()) {
-              this.apiService.refresh();
-            }
-          }, error => this.message = error);
+          ok => this.processResponse(ok),
+          error => this.message = error);
     } else {
       const index = this.rules.findIndex(x => x.name === rule.name);
       if (index > -1) {
@@ -90,6 +84,19 @@ export class RulesListComponent implements OnInit {
     }
   }
 
+  private processResponse(response: any) {
+    this.message = response;
+    if (!this.hasError()) {
+      this.apiService.refresh();
+    }
+    this.shouldKeepMessageOpen = false;
+    setTimeout(() => {
+      if (!this.hasError() && !this.shouldKeepMessageOpen) {
+        this.message = null;
+      }
+    }, 3000);
+  }
+
   hasError(): boolean {
     if (!this.message) {
       return false;
@@ -99,7 +106,7 @@ export class RulesListComponent implements OnInit {
   }
 
   setActiveRule(rule: IRule): void {
-    this.rule = rule;
+    this.activeRule = rule;
   }
 
   setStatus(change: MatSlideToggleChange, rule: IRule): void {
@@ -111,5 +118,19 @@ export class RulesListComponent implements OnInit {
     if (index > -1) {
       rule.actions.splice(index, 1);
     }
+  }
+
+  keepMessageOpen() {
+    this.shouldKeepMessageOpen = true;
+  }
+
+  cloneRule(rule: IRule) {
+    this.activeRule = JSON.parse(JSON.stringify(rule));
+    this.activeRule.id = undefined;
+  }
+
+  resetAll() {
+    this.activeRule = undefined;
+    this.apiService.refresh();
   }
 }

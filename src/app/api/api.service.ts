@@ -12,7 +12,7 @@ import {ApiModel} from './api.model';
 export class ApiService {
   private apiData: ReplaySubject<ApiModel> = new ReplaySubject<ApiModel>();
   private dummyActive: ReplaySubject<boolean> = new ReplaySubject<boolean>();
-  private hue = 'http://192.168.2.4/api/BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe/';
+  private hue = 'http://192.168.2.3/api/BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe/';
   private dummy = 'api/dummy/dummy.json';
   private initialized = false;
 

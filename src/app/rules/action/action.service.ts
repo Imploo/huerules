@@ -32,7 +32,7 @@ export class ActionService extends EntityService<ActionEntity> {
     return Object.keys(items).map(i => {
       const item = items[i];
       const properties = type === Types.groups
-        ? Object.keys(item.action)
+        ? Object.keys(item.action).concat([ 'transitiontime'])
         : Object.keys(item.state);
       return new ActionEntity(item.name, +i, type, properties);
     });

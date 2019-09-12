@@ -16,6 +16,9 @@
       "dom"
     ],
     "module": "es2015",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "dgram": ["node_modules/dgram-browserify"]
+    }
   }
 }

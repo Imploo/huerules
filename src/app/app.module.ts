@@ -26,6 +26,7 @@ import {
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SafeDatePipe} from './safe-date/safe-date.pipe';
+import { RulesListSearchPipe } from './rules/rules-list-search.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {SafeDatePipe} from './safe-date/safe-date.pipe';
     MenuComponent,
     RawDataComponent,
     JsonviewerComponent,
-    SafeDatePipe
+    SafeDatePipe,
+    RulesListSearchPipe
   ],
   imports: [
     BrowserModule,

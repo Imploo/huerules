@@ -1,5 +1,5 @@
 export interface IRule {
-    id: number;
+    id?: number;
     name: string;
     conditions: ICondition[];
     actions: IAction[];

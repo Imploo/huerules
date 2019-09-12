@@ -27,7 +27,8 @@
               "./node_modules/normalize.css/normalize.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/huejay/lib/Huejay.js"
             ]
           },
           "configurations": {

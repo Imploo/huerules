@@ -1,8 +1,7 @@
 <button class="btn btn-dark btn-fab"
-        mat-fab
-        (click)="apiService.refresh()">
+        mat-fab>
   <mat-icon>refresh</mat-icon>
 </button>
-<app-jsonviewer *ngIf="apiService.apiData$ | async as data"
+<app-jsonviewer *ngIf="hueService.getAllRules() | async as data"
                 [data]="data"
 ></app-jsonviewer>

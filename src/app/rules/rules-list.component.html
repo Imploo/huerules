@@ -4,13 +4,19 @@
 <div class="sidenav">
   <div class="sidenav__nav scrollable">
     <button (click)='newRule()'
-            class='btn-fab'
+            class='btn-fab sidenav__nav__add-button'
             mat-fab>
       <mat-icon>add</mat-icon>
     </button>
-    <mat-card *ngFor='let rule of rules'
-              mat-ripple
-              (click)="setActiveRule(rule)">
+    <mat-form-field>
+      <input type="text" class="sidenav__nav__search" [(ngModel)]="search" />
+    </mat-form-field>
+    <mat-card
+      *ngFor='let rule of rules | rulesListSearch: search'
+      mat-ripple
+      (click)="setActiveRule(rule)"
+      [class.active]="rule.id === activeRule?.id"
+    >
       <mat-card-title>{{ rule.name }}</mat-card-title>
       <mat-card-subtitle>{{ rule.lasttriggered | safeDate }}</mat-card-subtitle>
     </mat-card>
@@ -24,22 +30,23 @@
           Messages returned from Hue
         </mat-panel-title>
       </mat-expansion-panel-header>
+      <p *ngIf="!hasError()" (click)="keepMessageOpen()">Keep open</p>
       <app-jsonviewer [data]="message"
                       (click)='message = null'>
       </app-jsonviewer>
     </mat-expansion-panel>
-    <ng-container *ngIf="rule">
+    <ng-container *ngIf="activeRule">
       <mat-card class="rule-card">
         <mat-card-title>
-          <mat-slide-toggle [checked]="rule.status === 'enabled'" (change)="setStatus($event, rule)"></mat-slide-toggle>
+          <mat-slide-toggle [checked]="activeRule.status === 'enabled'" (change)="setStatus($event, activeRule)"></mat-slide-toggle>
           <mat-form-field>
-            <input type="text" matInput [(ngModel)]="rule.name"/>
+            <input type="text" matInput [(ngModel)]="activeRule.name"/>
           </mat-form-field>
         </mat-card-title>
         <mat-card-content>
           <div class="rule-card__content">
             <div class="rule-card__content__column">
-              <mat-card class="mat-elevation-z3" *ngFor='let condition of rule.conditions'>
+              <mat-card class="mat-elevation-z3" *ngFor='let condition of activeRule.conditions'>
                 <mat-card-content>
                   <div class="rule-card__content__column">
                     <app-state [(address)]="condition.address"></app-state>
@@ -52,42 +59,50 @@
                   </div>
                 </mat-card-content>
                 <mat-card-actions>
-                  <button (click)='removeCondition(rule, condition)' mat-icon-button class='btn btn-dark'>
+                  <button (click)='removeCondition(activeRule, condition)' mat-icon-button class='btn btn-dark'>
                     <mat-icon>remove_circle</mat-icon>
                   </button>
                 </mat-card-actions>
               </mat-card>
-              <mat-card class="add" mat-ripple (click)="newCondition(rule)">
+              <mat-card class="add" mat-ripple (click)="newCondition(activeRule)">
                 <mat-icon>add</mat-icon>
               </mat-card>
             </div>
             <div class="rule-card__content__column">
-              <mat-card class="mat-elevation-z3" *ngFor='let action of rule.actions'>
+              <mat-card class="mat-elevation-z3" *ngFor='let action of activeRule.actions'>
                 <mat-card-content>
                   <app-action
                     [action]="action"
-                    [rule]="rule">
+                    [rule]="activeRule">
                   </app-action>
                 </mat-card-content>
                 <mat-card-actions>
-                  <button (click)='removeAction(rule, action)' mat-icon-button class='btn btn-dark'>
+                  <button (click)='removeAction(activeRule, action)' mat-icon-button class='btn btn-dark'>
                     <mat-icon>remove_circle</mat-icon>
                   </button>
                 </mat-card-actions>
               </mat-card>
-              <mat-card class="add" mat-ripple (click)="newAction(rule)">
+              <mat-card class="add" mat-ripple (click)="newAction(activeRule)">
                 <mat-icon>add</mat-icon>
               </mat-card>
             </div>
           </div>
         </mat-card-content>
         <mat-card-actions>
-          <button (click)='removeRule(rule)' mat-button class='btn btn-dark btn-secondary'>
+          <button (click)='removeRule(activeRule)' mat-button class='btn btn-dark btn-secondary'>
             Remove rule
           </button>
-          <button (click)='save(rule)' mat-button class='btn btn-dark btn-primary'>Save rule</button>
+          <button (click)='cloneRule(activeRule)' mat-button class='btn btn-dark btn-secondary'>
+            Clone rule
+          </button>
+          <button (click)='save(activeRule)' mat-button class='btn btn-dark btn-primary'>Save rule</button>
         </mat-card-actions>
       </mat-card>
     </ng-container>
+    <button (click)='resetAll()'
+            class='btn-fab sidenav__content__reset-button'
+            mat-fab>
+      <mat-icon>refresh</mat-icon>
+    </button>
   </div>
 </div>

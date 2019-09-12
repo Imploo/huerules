@@ -25,9 +25,26 @@
   &__nav {
     background-color: #444;
     padding: 1rem;
+    width: 16rem;
+
+    &__add-button {
+      left: 10rem;
+    }
+
+    &__search {
+      width: 13rem;
+    }
 
     mat-card {
       margin-bottom: 1rem;
+
+      &.active {
+        background-color: #434;
+
+        &:hover {
+          background-color: #535;
+        }
+      }
 
       &:hover {
         background: rgba(0, 0, 0, .1);
@@ -49,6 +66,10 @@
     align-items: center;
     padding: 2rem;
 
+    &__reset-button {
+      right: 2rem;
+    }
+
     .rule-card {
       width: 80%;
       margin: 1rem 0;
@@ -56,6 +77,10 @@
       mat-card-title {
         display: flex;
         align-items: center;
+
+        mat-form-field {
+          width: 100%;
+        }
 
         p,
         mat-form-field,
@@ -108,8 +133,4 @@
       background-color: #444;
     }
   }
-}
-
-button.mat-fab.btn-fab {
-  left: 10rem;
 }
