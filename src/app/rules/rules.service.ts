@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {IAction, IBody, IPayload, IPayloadAction, IRule} from './rule';
+import {IAction, IBody, ICondition, IPayload, IPayloadAction, IRule} from './rule';
 import {ApiService} from '../api/api.service';
 import {Types} from '../api/types.model';
 import {ResponseModel} from '../api/api.model';
@@ -50,10 +50,30 @@ export class RulesService {
     const data = <IPayload>{};
     data.name = rule.name;
     data.actions = rule.actions && rule.actions.length > 0 ? this.convertToPayloadAction(rule.actions) : [];
-    data.conditions = rule.conditions;
+    data.conditions = this.convertToConditionRequest(rule.conditions);
     data.status = rule.status;
     console.log(JSON.stringify(data));
     return data;
+  }
+
+  convertToConditionRequest(conditions: ICondition[]): ICondition[] {
+    return conditions.map(condition => ({
+      ...condition,
+      value: this.convertToCorrectConditionValueType(condition.value)
+    }));
+  }
+
+  convertToCorrectConditionValueType(val: string | number[]): string | number[] {
+    if (Array.isArray(val)) {
+      return val;
+    }
+
+    const strVal = val as string;
+    if (strVal && strVal[0] === '[' && strVal[strVal.length - 1] === ']') {
+      return JSON.parse(strVal);
+    }
+
+    return val;
   }
 
   convertToPayloadAction(data: IAction[]): IPayloadAction[] {

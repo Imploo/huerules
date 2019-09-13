@@ -21,7 +21,7 @@ export interface IBody {
 export interface ICondition {
     address: string;
     operator: string;
-    value: string;
+    value: string | number[];
 }
 
 export interface IPayload {
