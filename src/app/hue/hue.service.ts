@@ -1,4 +1,6 @@
 import {Injectable} from '@angular/core';
+import * as huejay from 'huejay';
+import {from} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
