@@ -11,11 +11,11 @@ export class HueService {
   }
 
   getAllRules() {
-    // const client = huejay.Client({
-    //   host: '192.168.2.3',
-    //   username: 'BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe'
-    // });
-    //
-    // return from(client.rules.getAll());
+    const client = huejay.Client({
+      host: '192.168.2.3',
+      username: 'BDJo7SGB-6KsWHHAaXZidJNuboQejknxnh6ruEWe'
+    });
+
+    return from(client.rules.getAll());
   }
 }
