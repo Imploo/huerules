@@ -1,28 +1,30 @@
-<ng-select class="col dark"
-           [items]="entities"
-           bindLabel="name"
-           [(ngModel)]="selectedEntity"
-           groupBy="type"
-           placeholder="Select an entity"
-           (change)="handleChange()"
-           [clearable]="false">
-</ng-select>
-<div class="body_container" *ngFor='let body of action.body'>
+<ng-container *ngIf="action">
   <ng-select class="col dark"
-             *ngIf="selectedEntity"
-             [items]="selectedEntity.properties"
-             [(ngModel)]="body.key"
-             placeholder="Select an action"
-             [addTag]="true"
+             [items]="entities"
+             bindLabel="name"
+             [(ngModel)]="selectedEntity"
+             groupBy="type"
+             placeholder="Select an entity"
+             (change)="handleChange()"
              [clearable]="false">
   </ng-select>
-  <input type='text' [(ngModel)]='body.value'/>
-  <button (click)='removeBody(action, body)' mat-icon-button class='btn btn-dark'>
-    <mat-icon>remove_circle</mat-icon>
+  <div class="body_container" *ngFor='let body of action.body'>
+    <ng-select class="col dark"
+               *ngIf="selectedEntity"
+               [items]="selectedEntity.properties"
+               [(ngModel)]="body.key"
+               placeholder="Select an action"
+               [addTag]="true"
+               [clearable]="false">
+    </ng-select>
+    <input type='text' [(ngModel)]='body.value'/>
+    <button (click)='removeBody(action, body)' mat-icon-button class='btn btn-dark'>
+      <mat-icon>remove_circle</mat-icon>
+    </button>
+  </div>
+  <button (click)='newBodyEntry(action)'
+          mat-ripple
+          class='btn btn-dark new-body'>
+    <mat-icon>add</mat-icon>
   </button>
-</div>
-<button (click)='newBodyEntry(action)'
-        mat-ripple
-        class='btn btn-dark new-body'>
-  <mat-icon>add</mat-icon>
-</button>
+</ng-container>

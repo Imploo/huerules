@@ -1,0 +1,8 @@
+.message {
+  background-color: #484;
+  z-index: 100;
+
+  &.error {
+    background-color: darkred;
+  }
+}

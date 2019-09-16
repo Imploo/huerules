@@ -3,5 +3,8 @@ export enum Types {
   lights = 'lights',
   sensors = 'sensors',
   groups = 'groups',
-  config = 'config'
+  config = 'config',
+  resourcelinks = 'resourcelinks',
+  schedules = 'schedules',
+  scenes = 'scenes'
 }

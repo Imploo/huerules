@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {IAction, IBody, IPayload, IPayloadAction, IRule} from './rule';
 import {ApiService} from '../api/api.service';
 import {Types} from '../api/types.model';
-import {ResponseModel} from '../api/api.model';
+import {ResponseModel} from '../api/models/api.model';
+import {IAction, IBody, IPayload, IPayloadAction, IRule} from '../api/models/rule.model';
 
 @Injectable()
 export class RulesService {

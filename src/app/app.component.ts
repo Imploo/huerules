@@ -10,4 +10,5 @@ import {RulesService} from './rules/rules.service';
 })
 export class AppComponent {
   title = 'app';
+
 }

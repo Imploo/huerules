@@ -27,6 +27,9 @@ import {
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SafeDatePipe} from './safe-date/safe-date.pipe';
 import { RulesListSearchPipe } from './rules/rules-list-search.pipe';
+import { ResourcelinksComponent } from './resourcelinks/resourcelinks.component';
+import { DummyButtonComponent } from './dummy-button/dummy-button.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { RulesListSearchPipe } from './rules/rules-list-search.pipe';
     RawDataComponent,
     JsonviewerComponent,
     SafeDatePipe,
-    RulesListSearchPipe
+    RulesListSearchPipe,
+    ResourcelinksComponent,
+    DummyButtonComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
