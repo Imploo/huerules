@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IAction, IBody, IRule} from '../rule';
 import {ActionEntity} from '../entities/actionEntity';
 import {ActionService} from './action.service';
+import {IAction, IBody, IRule} from '../../api/models/rule.model';
 
 @Component({
   selector: 'app-action',

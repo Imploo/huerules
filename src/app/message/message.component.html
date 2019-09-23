@@ -1,0 +1,36 @@
+<div class="message error"
+     *ngIf="apiService.dummyActive$ | async">Dummy values are active!
+</div>
+<mat-expansion-panel
+  *ngIf='messageService.message'
+  class='message'
+  [class.error]="messageService.hasError()">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <p>
+        Messages returned from Hue
+      </p>
+      <mat-icon
+        mat-ripple
+        (click)='keepMessageOpen()'
+      >
+        timer-off
+      </mat-icon>
+      <mat-icon
+        mat-ripple
+        (click)='messageService.message = null'
+      >
+        close
+      </mat-icon>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <button
+    *ngIf="!messageService.hasError()"
+    mat-ripple
+    (click)="keepMessageOpen()"
+  >
+    Keep open
+  </button>
+  <app-jsonviewer [data]="messageService.message">
+  </app-jsonviewer>
+</mat-expansion-panel>

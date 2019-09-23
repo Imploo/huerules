@@ -1,10 +1,10 @@
-import {Injectable, Type} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, ReplaySubject} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {map, timeout} from 'rxjs/operators';
 import {Types} from './types.model';
-import {IPayload} from '../rules/rule';
-import {ApiModel} from './api.model';
+import {ApiModel} from './models/api.model';
+import {IPayload} from './models/rule.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,8 @@ export class ApiService {
   private dummy = 'api/dummy/dummy.json';
   private initialized = false;
 
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient) {
   }
 
   public get apiData$(): Observable<ApiModel> {
@@ -40,13 +41,13 @@ export class ApiService {
         if (body && body[0] && body[0].error) {
           this.loadDummy();
         } else {
-          this.apiData.next(body);
+          this.apiData.next(this.toDtoModels(body));
         }
       },
       () => this.loadDummy());
   }
 
-  private loadDummy() {
+  public loadDummy() {
     this.hue = this.dummy;
     this.dummyActive.next(true);
     this.http.get<ApiModel>(this.dummy).subscribe(dummy => {
@@ -75,5 +76,33 @@ export class ApiService {
 
   public deleteRule(id: number): Observable<any> {
     return this.http.delete(`${this.hue + Types.rules}/${id}`);
+  }
+
+  public delete(type: Types, id: number): Observable<any> {
+    return this.http.delete(`${this.hue}${type}/${id}`);
+  }
+
+  private toDtoModels(body: any): ApiModel {
+    return {
+      ...body,
+      resourcelinks: Object.keys(body[Types.resourcelinks]).map(key => {
+        const resourcelink = body[Types.resourcelinks][key];
+        return {
+          ...resourcelink,
+          id: key
+        };
+      })
+    };
+  }
+
+  public responseObjectToTypesArray<T>(responseDto: {[id: number]: T}): T[] {
+    return Object.keys(responseDto)
+      .map(key => {
+        const dto = responseDto[key];
+        return <T>{
+          ...dto,
+          id: +key
+        };
+      });
   }
 }

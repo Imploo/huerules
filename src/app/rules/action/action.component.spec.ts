@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActionComponent } from './action.component';
+import {MockComponent} from 'ng-mocks';
+import {NgSelectComponent} from '@ng-select/ng-select';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {FormsModule} from '@angular/forms';
+import {MatIcon} from '@angular/material';
 
 describe('ActionComponent', () => {
   let component: ActionComponent;
@@ -8,7 +13,12 @@ describe('ActionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActionComponent ]
+      imports: [HttpClientTestingModule, FormsModule],
+      declarations: [
+        ActionComponent,
+        MockComponent(NgSelectComponent),
+        MockComponent(MatIcon),
+      ]
     })
     .compileComponents();
   }));

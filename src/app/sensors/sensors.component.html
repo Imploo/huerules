@@ -1,1 +1,28 @@
-Sensors work!
+<button class="btn btn-dark btn-fab"
+        mat-fab
+        (click)="apiService.refresh()">
+  <mat-icon>refresh</mat-icon>
+</button>
+<ng-container *ngIf="getSensors() | async as data"
+>
+  <mat-card *ngFor="let key of getKeys(data)">
+    <ng-container *ngIf="data[key] as sensor">
+      <mat-card-title>{{ sensor.name }}</mat-card-title>
+      <mat-card-subtitle
+        *ngIf="sensorNotUsed(key) | async"
+        class="sensor--not-found"
+      >
+        Not in use
+      </mat-card-subtitle>
+      <mat-card-content>
+        <app-jsonviewer [data]="sensor"></app-jsonviewer>
+        <mat-icon
+          *ngIf="sensorNotUsed(key) | async"
+          mat-ripple
+          class="sensor__delete"
+          (click)="deleteSensor(key)"
+        >delete</mat-icon>
+      </mat-card-content>
+    </ng-container>
+  </mat-card>
+</ng-container>

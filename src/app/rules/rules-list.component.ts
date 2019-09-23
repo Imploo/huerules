@@ -1,9 +1,10 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {RulesService} from './rules.service';
-import {IAction, ICondition, IRule} from './rule';
-import {ResponseModel} from '../api/api.model';
 import {ApiService} from '../api/api.service';
 import {MatSlideToggleChange} from '@angular/material';
+import {MessageService} from '../message/message.service';
+import {ResponseModel} from '../api/models/api.model';
+import {IAction, ICondition, IRule} from '../api/models/rule.model';
 
 @Component({
   moduleId: module.id,
@@ -16,12 +17,13 @@ export class RulesListComponent implements OnInit {
 
   rules: IRule[];
   activeRule: IRule;
-  message: ResponseModel[];
   operators: string[] = ['eq', 'lt', 'gt', 'dx', 'ddx', 'in'];
-  private shouldKeepMessageOpen = false;
   public search: string;
 
-  constructor(private _rulesService: RulesService, public apiService: ApiService) {
+  constructor(
+    private _rulesService: RulesService,
+    public apiService: ApiService,
+    private messageService: MessageService) {
   }
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class RulesListComponent implements OnInit {
     this._rulesService.save(rule)
       .subscribe(
         ok => this.processResponse(ok),
-        (error) => this.message = error);
+        (error) => this.messageService.setMessage(error));
   }
 
   newCondition(rule: IRule): void {
@@ -68,7 +70,7 @@ export class RulesListComponent implements OnInit {
       this._rulesService.delete(rule.id)
         .subscribe(
           ok => this.processResponse(ok),
-          error => this.message = error);
+          error => this.messageService.setMessage(error));
     } else {
       const index = this.rules.findIndex(x => x.name === rule.name);
       if (index > -1) {
@@ -84,25 +86,11 @@ export class RulesListComponent implements OnInit {
     }
   }
 
-  private processResponse(response: any) {
-    this.message = response;
-    if (!this.hasError()) {
+  private processResponse(response: ResponseModel[]) {
+    this.messageService.setMessage(response);
+    if (!this.messageService.hasError()) {
       this.apiService.refresh();
     }
-    this.shouldKeepMessageOpen = false;
-    setTimeout(() => {
-      if (!this.hasError() && !this.shouldKeepMessageOpen) {
-        this.message = null;
-      }
-    }, 3000);
-  }
-
-  hasError(): boolean {
-    if (!this.message) {
-      return false;
-    }
-    const json = JSON.stringify(this.message);
-    return json.indexOf('error') > -1;
   }
 
   setActiveRule(rule: IRule): void {
@@ -118,10 +106,6 @@ export class RulesListComponent implements OnInit {
     if (index > -1) {
       rule.actions.splice(index, 1);
     }
-  }
-
-  keepMessageOpen() {
-    this.shouldKeepMessageOpen = true;
   }
 
   cloneRule(rule: IRule) {

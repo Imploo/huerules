@@ -24,3 +24,14 @@ pre span {
 .key {
   color: #C792EA;
 }
+
+.sensor {
+    &--not-found {
+      color: #f00;
+    }
+
+  &__delete {
+    color: #f00;
+    cursor: pointer;
+  }
+}

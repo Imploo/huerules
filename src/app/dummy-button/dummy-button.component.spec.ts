@@ -1,22 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BackupComponent } from './backup.component';
+import { DummyButtonComponent } from './dummy-button.component';
+import {ApiService} from '../api/api.service';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 
-describe('BackupComponent', () => {
-  let component: BackupComponent;
-  let fixture: ComponentFixture<BackupComponent>;
+describe('DummyButtonComponent', () => {
+  let component: DummyButtonComponent;
+  let fixture: ComponentFixture<DummyButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      declarations: [ BackupComponent ]
+      declarations: [ DummyButtonComponent ],
+      providers: [
+        ApiService
+      ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BackupComponent);
+    fixture = TestBed.createComponent(DummyButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

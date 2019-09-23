@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {IRule} from './rule';
+import {IRule} from '../api/models/rule.model';
 
 @Pipe({
   name: 'rulesListSearch'

@@ -1,0 +1,27 @@
+<button class="btn btn-dark btn-fab"
+        mat-fab
+        (click)="apiService.refresh()">
+  <mat-icon>refresh</mat-icon>
+</button>
+<ng-container *ngIf="getResourcelinks() | async as data"
+>
+  <mat-card *ngFor="let key of getKeys(data)">
+    <ng-container *ngIf="data[key] as resource">
+      <mat-card-title>{{ resource.name }}</mat-card-title>
+      <mat-card-subtitle>{{ resource.description }}</mat-card-subtitle>
+      <mat-card-content>
+        <ul>
+          <li
+            *ngFor="let link of resource.links"
+            [class.resource-link__link--not-found]="linkNotFound(link) | async"
+          >{{ link }}</li>
+        </ul>
+        <mat-icon
+          mat-ripple
+          class="resource-link__delete"
+          (click)="deleteLink(key)"
+        >delete</mat-icon>
+      </mat-card-content>
+    </ng-container>
+  </mat-card>
+</ng-container>

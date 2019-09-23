@@ -1,24 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SensorsComponent } from './sensors.component';
+import { ResourcelinksComponent } from './resourcelinks.component';
 import {MockComponent} from 'ng-mocks';
 import {MatCard, MatCardContent, MatCardSubtitle, MatCardTitle, MatIcon} from '@angular/material';
-import {JsonviewerComponent} from '../jsonviewer/jsonviewer.component';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 
-describe('SensorsComponent', () => {
-  let component: SensorsComponent;
-  let fixture: ComponentFixture<SensorsComponent>;
+describe('ResourcelinksComponent', () => {
+  let component: ResourcelinksComponent;
+  let fixture: ComponentFixture<ResourcelinksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       declarations: [
-        SensorsComponent,
+        ResourcelinksComponent,
         MockComponent(MatIcon),
         MockComponent(MatCardTitle),
         MockComponent(MatCardSubtitle),
-        MockComponent(JsonviewerComponent),
         MatCardContent,
         MatCard
       ]
@@ -27,7 +25,7 @@ describe('SensorsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SensorsComponent);
+    fixture = TestBed.createComponent(ResourcelinksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
